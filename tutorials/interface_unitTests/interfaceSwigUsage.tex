@@ -1,0 +1,403 @@
+\documentclass[ twoside,openright,titlepage,numbers=noenddot,headinclude,
+                footinclude=true, cleardoublepage=empty,abstractoff, 
+                BCOR=5mm,paper=a4,fontsize=11pt,
+                ngerman,american,
+                ]{scrreprt} %its going to be a report
+                
+\usepackage{listings}
+\usepackage{hyperref}
+                
+\begin{document}
+\chapter{general things}
+\url{http://www.swig.org/Doc2.0/SWIGDocumentation.html}
+able to call for example c functions in a scripting language without changing the original function
+SWIG interface consists of several files
+\begin{itemize}
+	\item one main *.i file
+	\item tmaps.i typemap file	
+	\item several other *.i files containing wrapped functions
+\end{itemize}
+
+SWIG syntax always begins with a \% (is now not a comment)
+usage in scripting language:  import moduleName,  and than just call the functions
+
+\section{main.i file}
+this file should defines following things:
+\begin{itemize}
+	\item the module name
+	\item all needed header files(if c or c++ should be wrapped)
+	\item loading from SWIG modules( like carrays.i)
+	\item including of all needed *.i files
+	\item typemaps that are independent of scripting languages //really neccessary
+	\item exception handling if swig cannot be loaded
+	\item defination what functions should be wrapped
+\end{itemize}
+
+\subsection{module name}
+	\%module RNA
+\subsection{documentation insert}
+	\%pragma(perl5) include="RNA.pod" 
+	to insert a perl5 documentation POD(plain old documentation) file 
+\subsection{include source functions to wrap,include of other programming syntax} \label{subsec:source functions}
+	here insert c code into the .i file, to include every header file that contains some functions to wrap	
+	\begin{lstlisting}
+	%{
+
+	extern "C" {
+		#include  <ViennaRNA/data_structures.h>
+		#include  <ViennaRNA/dp_matrices.h>
+		#include  <ViennaRNA/model.h>ting}
+	}
+	%}
+	
+	\end{lstlisting}
+	
+\subsection{dealing with c arrays}
+\url{https://valelab.ucsf.edu/svn/3rdpartypublic/swig/Doc/Manual/Library.html#Library_carrays}
+carrays.i and cdata.i are already implemented modules and comes with swig
+\begin{lstlisting}
+%include carrays.i
+%array_functions(int, intP);
+%array_class(int, intArray);
+%array_functions(float, floatP);
+%array_class(float, floatArray);
+%array_functions(double, doubleP);
+%array_class(double, doubleArray);
+%array_functions(unsigned short, ushortP);
+%array_functions(short, shortP);
+%include cdata.i
+\end{lstlisting}
+
+\subsection{other general interface files}
+\begin{lstlisting}
+%include version.i
+%include typemaps.i
+// Additional target language specific typemaps, not shure if this is neccessary
+%include tmaps.i
+%include "exception.i"
+
+/* prepare conversions to native types, such as lists, these .i files are already implemented from SWIG */
+%include "std_pair.i";   
+%include "std_vector.i";
+%include "std_string.i";  // more details can be found in section typemaps, conversions
+
+
+
+/* Include all relevant interface definitions, all of this files should contain wrapped functions for usage */
+%include params.i
+%include model_details.i
+%include fold_compound.i
+%include utils.i
+
+\end{lstlisting}
+\subsubsection{version.i}
+should be in seperated folders for each target language
+
+example for perl, just defines the current version number
+\begin{lstlisting}
+%{
+/** @file version.i.in
+ * @brief Set $RNA::VERSION to the bindings version
+ */
+%}
+
+%perlcode %{
+our $VERSION = '2.2.5';
+sub VERSION () { $VERSION };
+%}
+\end{lstlisting}
+
+example for python
+\begin{lstlisting}
+%{
+/** @file version.i.in
+ * @brief Set RNA.__version__ to the bindings version
+ */
+%}
+
+%pythoncode %{
+__version__ = '2.2.5'
+%}
+\end{lstlisting}
+
+
+\subsubsection{typemaps.i}
+defines how some specific objects, variable should be wrapped to specific target languages( example: c char * to string in perl)
+should be in seperated folders for each target language
+More can be seen in chapter typemaps
+
+\subsubsection{exception.i}
+handles exceptions of SWIG, HERE raises an exception if SWIG has an error
+
+\begin{lstlisting}
+/* handle exceptions */
+%include "exception.i"
+
+%exception {
+  try {
+    $action
+  } catch (const std::exception& e) {
+    SWIG_exception(SWIG_RuntimeError, e.what());
+  }
+}
+\end{lstlisting}
+
+
+
+\section{definition what functions should be wrapped}
+normally swig wraps all functions available in the given header files \ref{subsec:source functions}, even if the outcome is bullshit. You can define prior what functions should not be wrapped, because these functions are not needed in the interface, and you can overwrite every functions and wrap it yourself( should be happen in the additional .i files).
+
+Example test.h was included an contains the function printTest(). To exclude this functions from wrapping just write: 
+\begin{lstlisting} 
+%ignore printTest() 
+\end{lstlisting}
+
+if you have several functions that should be excluded you can use a regex search, and replace all of the function names.
+\begin{lstlisting}
+/* do not wrap any data structure, typedef, enum, or constant prefixed by 'vrna_' || 'VRNA_' */
+%rename("$ignore",  %$isclass, regextarget=1) "^vrna_";
+%rename("$ignore",  %$istypedef, regextarget=1) "^vrna_";
+%rename("$ignore",  %$isenum, regextarget=1) "^vrna_";
+%rename("$ignore",  %$isconstant, regextarget=1) "^VRNA_";
+%rename("$ignore",  %$isconstant, regextarget=1) "^vrna_";
+\end{lstlisting}
+
+
+\chapter{wrapping functions , doing the real stuff}
+\section{own wrapping of a simple function}
+following shemata have to be kept
+\begin{enumerate}
+\item renaming the source function
+\item defining the new wrapper function
+\item create a new object for this new wrapper function
+\item write the header file for this wrapper function
+\item ignore the old function( no default wrapping form swig anymore)
+\end{enumerate}
+
+\subsection{example}
+lets look at on example:
+ViennaRNA/fold.h header contains a c function called float() with following header
+
+\begin{lstlisting}
+float fold( const char *sequence, char *structure);
+\end{lstlisting}
+
+Structure will be a reference pointer and will contian the correct structure for this sequence after the call
+And now we are going to wrap this function, to have 2 return parameters instead of pointers(because we want to use this function in perl or python)
+
+\begin{lstlisting}
+%rename (fold) my_fold;
+%{
+  char *my_fold(char *string, float *OUTPUT) {
+    char *struc;
+    struc = (char *)calloc(strlen(string)+1,sizeof(char));
+    *energy = fold(string, struc);
+    return(struc);
+  }
+%}
+
+%newobject my_fold;
+char *my_fold(char *string, float *OUTPUT);
+%ignore fold;
+
+\end{lstlisting}
+
+my\_fold is now the name for the wrapped c function used within the SWIG interface: for usage in the target language, we have to call our original name again:
+
+\begin{lstlisting}
+(structure,energy) = RNA.fold(sequence)
+\end{lstlisting}
+
+\subsection{important things}
+
+rename and ignore neccessary so that we can only call the wrapped function fromin the target language, and mask the original function
+ 
+ *OUTPUT will be used if we want to convert reference pointers to additional return parameters
+if such a reference pointer is needed by the source function, that we have to allocate our own memory within our wrapped function, and to free every memory to avoid memory leaks. Simple datastructures like our struc char* array here can be garbe colector handled by the target language by using newobject myfold. now every memory of the return argument will be looked after by the target language.
+More comlicated structures or vectors, have to be freed by our own, which is handled in the section( memory handling)
+ 
+
+
+
+
+\chapter{typemaps, conversions}
+sometimes SWIG is not able to convert specific datatypes into other, escecially with pointer and lists, or the target languages have differences, therefore you can write your own conversions.
+Each of this tmaps files should be in a seperated folder alongside with the version.i files for each target language file. General conversions with now differences in the target languages can be writen inside the main.i function.
+
+
+
+\section{conversion to native types}
+can be coded inside the main.i file, now we can use things like int or double or double souble arrays in the scripting languages and they are recognized by the interface
+
+\begin{lstlisting}
+%include "std_pair.i";
+%include "std_vector.i";
+%include "std_string.i";
+
+namespace std {
+  %template(DoublePair) std::pair<double,double>;
+  %template(IntVector) std::vector<int>;
+  %template(DoubleVector) std::vector<double>;
+  %template(StringVector) std::vector<string>;
+  %template(ConstCharVector) std::vector<const char*>;
+  %template(SOLUTIONVector) std::vector<SOLUTION>;
+  %template(CoordinateVector) std::vector<COORDINATE>;
+  %template(DoubleDoubleVector) std::vector< std::vector<double> > ;
+  %template(IntIntVector) std::vector<std::vector<int> > ;
+};
+
+\end{lstlisting}
+
+here define new functions that can be called from the target languages
+\begin{lstlisting}
+%{
+#include <string>  // c code can be inserted inside a %{ %}
+#include <cstring>
+
+  const char *convert_vecstring2veccharcp(const std::string & s){
+    return s.c_str();
+  }
+
+  char *convert_vecstring2veccharp(const std::string & s){
+    char *pc = new char[s.size()+1];
+    std::strcpy(pc, s.c_str());
+    return pc;
+  }
+  
+  short convert_vecint2vecshort(const int & i){
+    return (short) i;
+  }
+
+  FLT_OR_DBL convert_vecdbl2vecFLR_OR_DBL(const double & d){
+    return (FLT_OR_DBL) d;
+  }
+
+%}
+
+\end{lstlisting}
+
+
+\section{real typemaps}
+Each tmaps.i file should be in a specific target language folder.
+Each new typemap starts with a \%typemap(in) or \%typemap(out) to define what should be possible ( in = from target language to SWIG and than to source language, and out is vica verse)
+
+the next examples deal with examples to convert from c to perl5, python2 and python3
+
+
+\subsection{perl5 typemaps}
+
+inside the tmaps.i file
+
+\begin{lstlisting}
+// convert between perl and C file handle
+%typemap(in) FILE * {
+  if (SvOK($input)) /* check for undef */
+	$1 = PerlIO_findFILE(IoIFP(sv_2io($input)));
+  else  $1 = NULL;
+}
+
+// This tells SWIG to treat char ** as a special case
+%typemap(in) char ** {
+        AV *tempav;
+        I32 len;
+        int i;
+        SV  **tv;
+        if (!SvROK($input))
+            croak("Argument $argnum is not a reference.");
+        if (SvTYPE(SvRV($input)) != SVt_PVAV)
+            croak("Argument $argnum is not an array.");
+        tempav = (AV*)SvRV($input);
+        len = av_len(tempav);
+        $1 = (char **) malloc((len+2)*sizeof(char *));
+        for (i = 0; i <= len; i++) {
+            tv = av_fetch(tempav, i, 0);
+            $1[i] = (char *) SvPV(*tv,PL_na);
+        }
+        $1[i] = NULL;
+};
+
+
+// Creates a new Perl array and places a NULL-terminated char ** into it
+%typemap(out) char ** {
+        AV *myav;
+        SV **svs;
+        int i = 0,len = 0;
+        /* Figure out how many elements we have */
+        while ($1[len])
+           len++;
+        svs = (SV **) malloc(len*sizeof(SV *));
+        for (i = 0; i < len ; i++) {
+            svs[i] = sv_newmortal();
+            sv_setpv((SV*)svs[i],$1[i]);
+        };
+        myav =  av_make(len,svs);
+        free(svs);
+        $result = newRV((SV*)myav);
+        sv_2mortal($result);
+        argvi++;
+}
+\end{lstlisting}
+
+\subsection{python2 typemaps}
+
+inside the tmaps.i file
+
+\begin{lstlisting}
+// convert between python and C file handle
+%typemap(in) FILE * {
+  if (PyFile_Check($input)) /* check for undef */
+        $1 = PyFile_AsFile($input);
+  else  $1 = NULL;
+}
+
+%typemap(out) float [ANY] {
+  int i;
+  $result = PyList_New($1_dim0);
+  for (i = 0; i < $1_dim0; i++) {
+    PyObject *o = PyFloat_FromDouble((double) $1[i]);
+    PyList_SetItem($result,i,o);
+  }
+}
+
+// This tells SWIG to treat char ** as a special case
+%typemap(in) char ** {
+  /* Check if is a list */
+  if (PyList_Check($input)) {
+    int size = PyList_Size($input);
+    int i = 0;
+    $1 = (char **) malloc((size+1)*sizeof(char *));
+    for (i = 0; i < size; i++) {
+      PyObject *o = PyList_GetItem($input,i);
+      if (PyString_Check(o))
+        $1[i] = PyString_AsString(PyList_GetItem($input,i));
+      else {
+        PyErr_SetString(PyExc_TypeError,"list must contain strings");
+        free($1);
+        return NULL;
+      }
+    }
+    $1[i] = 0;
+  } else {
+    PyErr_SetString(PyExc_TypeError,"not a list");
+    return NULL;
+  }
+}
+\end{lstlisting}
+
+\section{python3 typemaps}
+Thank god , SWIG has already implemented things for file handling in python 3
+
+\begin{lstlisting}
+// convert between python and C file handle
+%include "file_py3.i" // python 3 FILE *
+\end{lstlisting}
+
+
+\chapter{other things}
+
+\section{constant wrapping}
+in constraints.i
+\section{global variables}
+in globals-md.i
+
+\end{document}

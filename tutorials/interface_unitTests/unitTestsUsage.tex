@@ -1,0 +1,95 @@
+\documentclass[openright,titlepage,numbers=noenddot,headinclude,%1headlines,% letterpaper a4paper
+                footinclude=true,abstractoff, % <--- obsolete, remove (todo)
+                BCOR=5mm,paper=a4,fontsize=11pt,%11pt,a4paper,%
+                ]{scrreprt}
+                
+\usepackage{graphicx}
+\usepackage{listings}
+\graphicspath{ {images/unitTests/} }
+
+\begin{document}
+
+\chapter{c unit tests}
+\section{checkmk framework}
+testframewerk for autocreating of c unit Tests, easy to handle
+Download from : http://check.sourceforge.net/
+Converts *.ts files into proper *.c test files
+only change the *.ts files and no need to change .c file
+usage:
+	
+	checkmk test.ts \textgreater test.c
+
+for more informations look up the manual pdf
+
+
+\section{.ts file}
+
+all testfunctions have to start with \texttt{\#test}
+
+testsuites for more clustering, but not necessary
+
+\begin{lstlisting}
+#suite test_Functions_common
+	#test test1{
+		int i =1;
+		int j =0;
+		ck_assert_msg(i==j,"message");
+	}
+	#test test2{
+		int i =4;
+		int j =0;
+		ck_assert_msg(i==j,"message");
+	}
+	
+\end{lstlisting}
+
+
+
+\chapter{perl tests}
+\section{general}
+writing of the perl tests directly no such thing neccessary as checkmk
+\texttt{Test::More} framework will be used
+manuals: http://perldoc.perl.org/Test/More.html
+
+\section{example}
+30 tests will be made, error if this value don't fit with the amount of implemented tests
+
+\begin{lstlisting}
+use Test::More tests => 30  
+use strict;
+use warnings;
+
+is(1,1); # error if 1 is not 1
+ok(isCorrect); # error if isCorrect is not True
+
+\end{lstlisting}
+
+\chapter{python tests}
+\section{general}
+\begin{itemize}
+\item texttt{unittest} framework is used.
+\item https://docs.python.org/2.7/library/unittest.html
+\item define testCase class and corresponsing tests
+\item we also have to call the tests by the main function will call every function of the TestCase object starting with "test\_name1", and only those tests
+\end{itemize}
+\section{example}
+\begin{lstlisting}
+import unittest
+if __name__ == '__main__':  # main function, calls every test starting with test_...
+    unittest.main()
+    
+class GeneralTests(unittest.TestCase):
+	def test_calc1(self):
+		print("starting of first test")
+		self.assertEqual(1,1)
+	def test_calc2(self):
+		print("test2");
+		self.assertEqual(4,0);
+		self.assertTrue(isCorrect)
+
+\end{lstlisting}
+
+
+
+
+\end{document}
