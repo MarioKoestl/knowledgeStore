@@ -1,0 +1,315 @@
+qntm.org/files/perl/perl.html
+
+#preventing me from writing nonsense, create PRAGMAS
+use strict;
+use warnings;
+
+arguments are in @ARGV
+
+3 variables, declaration with 'my'
+$scalars, @arrays and %hashes
+
+#####command line arguments
+
+use Getopt::Long;
+
+my $usage= << "JUS";
+  Title:    Manhatten Tourist Problem
+  usage:   mtp_mkoestl_ex03.pl -file [inputFile]
+  
+  options: -file|f  [REQUIRED]   Input file for road matrix [int arrays]
+                                 InutFile should have following format
+                                 # west-east streets
+                                 3 2 4 0
+                                 3 2 4 2
+                                 0 7 3 4
+                                 3 3 0 2
+                                 1 3 2 2
+                                 
+                                 # north-south streets 
+                                 1 0 2 4 3
+                                 4 6 5 2 1
+                                 4 4 5 2 1
+                                 5 6 8 5 3
+           -help|h               print this message
+           -verbose|v            print additional informations        
+
+  results: Calculateds the path with the most costtourist attractions) from position (0/0) to most right and down corner of the road network. Dynamically Programmed
+JUS
+
+
+
+my $opt_help;
+my $opt_file;
+my $opt_verbose;
+
+GetOptions(
+  "h|help|" => \$opt_help,
+  "file|f=s" => \$opt_file,
+  "verbose|v" => \$opt_verbose);
+    
+#print usage if requested
+if($opt_help){
+  print $usage;
+  exit;
+}
+
+if (! -f $opt_file) {
+    print "$opt_file is no valid file \n$usage";
+    exit;
+}
+
+
+###########scalars
+undef = none = NUll
+integer and float is the same
+
+. for string concationating
+no Boolean, Boolean false = scalar with undef, number 0, string "", or string "0"
+
+# Numerical operators:  <,  >, <=, >=, ==, !=, <=>, +, *
+# String operators:    lt, gt, le, ge, eq, ne, cmp, ., x
+###########################
+
+########arrays
+my @array = (3,4,5,3,);
+print $array[2]; = 5
+print $array[-2]; = 5
+length = scalar @array
+
+
+#array inside array
+
+my @ar1 = (1,3,4,5);
+my @ar2 = (4,3,6,7);
+my @all = (\@ar1,\@ar2);
+
+my @array1 = @\ar1; # = value of @ar1
+
+##########hashes
+my %scientiest = ( "newton" => 5, "sepp" => 4);
+print $scientists{"sepp"};  = 4
+
+convert hash to array 
+my @array = %hash;   Pairs of hash and key are the same, but order is different
+
+my @firstArray = ("sep","hugo");
+my @secondArry  (@firstArray,"fritz");
+
+######pointer or references
+Reference is always a scalar
+
+my $ref = \$var1;
+$ref = adress of $var1
+$$ref = value of $var1, is the same as $var1;
+
+for arrays ; print $$arrayref[0] is the same as $arrayRef->[0]
+
+anonymous arrays and hashes
+my $owner2Ref = {
+	"name" => "Mickey Mouse",
+	"DOB"  => "1928-11-18",
+};
+
+# Square brackets denote an anonymous array
+my $ownersRef = [ $owner1Ref, $owner2Ref ];
+my $owner2Ref = {
+	"name" => "Mickey Mouse",
+	"DOB"  => "1928-11-18",
+};
+
+# Square brackets denote an anonymous array
+my $ownersRef = [ $owner1Ref, $owner2Ref ];
+#correct way
+	my %account = (
+	"number" => "31415926",
+	"opened" => "3000-01-01",
+	"owners" => [
+		{
+			"name" => "Philip Fry",
+			"DOB"  => "1974-08-06",
+		},
+		{
+			"name" => "Hubert Farnsworth",
+			"DOB"  => "2841-04-09",
+		},
+	],
+);
+print "Account #", $account{"number"}, "\n";
+print "Opened on ", $account{"opened"}, "\n";
+print "Joint owners:\n";
+print "\t", $account{"owners"}->[0]->{"name"}, " (born ", $account{"owners"}->[0]->{"DOB"}, ")\n";
+print "\t", $account{"owners"}->[1]->{"name"}, " (born ", $account{"owners"}->[1]->{"DOB"}, ")\n";
+
+###if else short, ternary operators
+($gain == 1 ? "experience point" : "experience points")
+my $eggs = 5;
+print "You have ", $eggs == 0 ? "no eggs" :
+                   $eggs == 1 ? "an egg"  :
+                   "some eggs";
+
+####loops
+
+foreach my $nuc (split//,$s)  # to loop over a string scalar, split with nothing
+f
+foreach my $string ( @array ) {
+	print $string;
+}
+foreach my $key (sort[not neccesary] keys %scientists) {
+	print $key, ": ", $scientists{$key};
+}
+
+print $_ foreach @array[or scalar, or hash];  # super short syntax, $_ = default iterator scalar
+
+#####sub routines############
+always reference calls
+arguments are always a list of scalars, hash for. ex. is list with length 2*N
+
+arguments available with array variable @_
+first argument= my $word = shift @_   or @_[0]
+
+unpacking routine arguments:
+my ($first,$second,$third) = @_;
+
+or 
+
+print left_pad("oldString" => "pod", "width" => 10, "padChar" => "+");
+
+And the subroutine itself looks like this:
+
+sub left_pad {
+	my %args = @_;
+	my $newString = ($args{"padChar"} x ($args{"width"} - length $args{"oldString"})) . $args{"oldString"};
+	return $newString;
+}
+
+Returning:
+sub contextualSubroutine {
+	# Caller wants a list. Return a list
+	return ("Everest", "K2", "Etna") if wantarray;
+
+	# Caller wants a scalar. Return a scalar
+	return 3;
+}
+
+my @array = contextualSubroutine();
+print @array; # "EverestK2Etna"
+
+my $scalar = contextualSubroutine();
+print $scalar; # "3"
+
+###system calls####
+my $returnCode = system "perl","anotherscript.pl","parameter1","par2a",...
+$rc >>=8; 	#just take the relevant 8 bits
+print $rc;
+
+my $outputText = system "perl","anotherscript.pl","parameter1","  #get STDOUT from other program to text
+print $outputText;
+
+###file handling###
+
+mode < = reading form file
+mode > = writing to file
+mode >> = appending to file
+
+#creating and open a file
+unless(open $fh_out,'>'.$f_out)
+{
+    die "Couldn't create'".$f_out."' because: ".$!;
+}
+
+my $f = "text.txt";
+open(my $fh, "<", $f) || die "Couldn't open '".$f."' for reading because: ".$!;
+
+Reading lines:
+while(my $line = <$fh>){
+	print "$line";
+}
+
+Writing to file, no append!!!!!
+open(my $fh2, ">", $f) || die "Couldn't open '".$f."' for reading because: ".$!;
+print $fh2 "iiffjfjfjfjfj";
+
+DOES filename exists
+print "doens't exist -e "filename";
+-d  is directory
+-f  is a normal file
+more are found under "perl file test"
+
+######open directory
+opendir(my $dh, $dirPath) || die "Couldn't open '".$dirPath."' because: ".$!;
+
+while (my $file = readdir($dh)) {
+    if ($file =~ m/gene_pos*/)
+    {
+        print $file ."\n";
+    }
+}
+next unless (-f "$dir/$file");  # only get files,  -d for directorys
+
+###regex####
+\w+  anynumbers+anycharacter for building words, infinit amount of them
+\s+ one or more spaces
+[abdgf] one of the letters;
+
+if any regex is put under (), than this will be stored as found pattern
+
+my $string = "colourless green ideas sleep furiously";
+my @matches = $string =~ m/(\w+)\s+((\w+)\s+(\w+))\s+(\w+)\s+(\w+)/;
+
+print join ", ", map { "'".$_."'" } @matches;
+# prints "'colourless', 'green ideas', 'green', 'ideas', 'sleep', 'furiously'"
+
+substitude one pattern in a string, (apperently really only one times)
+
+my $text = "hugo sepp fraunz";
+$text =~ s/sepp/sepp2/;
+
+getting more than one found pattern, with \g for group,. Prints all Words of the string
+
+my @matches =$myString =~ m/(\w+)/g; 
+print join ", ", map {"'".$_."'"} @matches;
+
+$-[0] stores the -1 location of the string for the found pattern
+
+# print the position of all found matches
+while ($sequence =~ /$cutSeq/g) {
+        print $-[0];
+ }
+
+global substitution
+$string =~ s/[aeiou]/'-'/gi;  #  substitute every character of aeiou with -, /i for case incensitive
+
+$sentence =~ tr/abc/edf/  // replace each a with a e, each b with a d .....
+
+/x allows the regex to contain whitespace, returns and comments( so you can comment your regex now
+
+
+###############
+##IO things
+<STDIN>, <STDOUT>, <STDERR>
+
+
+###############functions####
+
+length  # length of scalar
+reverse
+pop 		extracts and return the last element of 
+
+push 		append extra elements to array
+shift 		extracts and return the frst alement of array
+unshift 	insert new element s at beginning of array
+splice(@stack, first array position, second array position,replacement of first position, repl. of sec. position.)  removes this splice and replaces it
+
+join(",",@elements);	concationating strings
+map {uc $_ } @capitals; every capital element will be uppercase now, map any funciton can be used
+
+grep {length $_ ==6} @capitals;   = all capitals with 6 letters
+print scalar grep {$_ eq "searchString"} @ capitals   = is searchString in array, 1 or 0
+
+sort @String array
+sort {$a <=> $b} @intArray
+sort comparator @array     , create your own comparator, with -1,0,1 as return values;
+
+substr map{ substr $word,$_,1} ( 0..(length $word)-1)
+chomp	remove last char froms tring

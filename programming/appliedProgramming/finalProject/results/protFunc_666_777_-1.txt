@@ -1,0 +1,3 @@
+groupId	protId	protCount	functId	desc
+SEPPGROUP	prot1			
+SEPPGROUP2	prot11			
