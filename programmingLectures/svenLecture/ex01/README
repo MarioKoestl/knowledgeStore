@@ -1,0 +1,38 @@
+Liebe APBC-ler/innen,
+
+Hier ist zum Einstieg das Uebungsbeispiel "Word Count":
+
+Schreibt ein Programm, das einen Text einliest und eine nach
+Frequenzen sortierte Liste der Worte ausgibt (haeufigstes Wort
+zuerst). "Word Count" ist in einer kompilierten Sprache (z.B. C, C++,
+Haskell, Java) und einer Script-Sprache (z.B. Perl, Ruby, Python) zu
+implementieren. Eure Programme soll mittels Kommandozeilenparameter -f
+die Textdatei erhalten und mit -eng bzw. -ger soll man einstellen
+koennen ob ein englischer oder deutscher Text uebergeben wurde.
+
+Um eure Loesungen auseinander zuhalten, benennt sie bitte entsprechend
+(z.B. WordCount-sfindeiss.pl fuer Svens Perl Loesung). Bitte fuegt am
+Anfang des Programms einen Kommentar ein der angibt wie man dieses
+(compilieren und) ausfuehren muss (z.B. Perl WordCount-sfindeiss.pl -f
+[INPUTFILE]). Diese Regeln gelten immer!
+
+Zusatzhinweis:
+==============
+
+- Beachtung von Gross- und Kleinschreibung beim 
+  Woerterzaehlen (Das = das) waere wuenschenswert
+- Ignorieren von Satzzeichen wie zum Beispiel ",.- waere
+  wuenschenswert
+- Deutsche Texte koennen Umlaute enthalten
+- Es gibt viele weitere Dinge die man beruecksichtigen sollte, um
+  einen moeglichst realistischen "Word Count" zu bekommen.
+
+Tipps:
+======
+
+(1) Empfehlenswerte Datenstruktur:
+    (a) Hashtable in C, Perl, Ruby
+    (b) STL-Map IN C++
+    z.B. http://www.cprogramming.com/tutorial/stl/stlmap.html
+
+happy hacking

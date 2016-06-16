@@ -1,0 +1,9 @@
+# west-east streets
+4 4
+3 0
+1 4
+
+# north-south streets 
+9 9 3
+5 5 2
+

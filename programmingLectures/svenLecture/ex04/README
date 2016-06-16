@@ -1,0 +1,117 @@
+(1) Zufallssequenzen (unter Erhaltung der Buchstabenhaeufigkeiten):
+
+  (a) WUERFELN: Schreibe ein Programm, das eine Sequenze einliest, die
+      Haeufigkeiten der einzelnen Buchstaben des zugrundeliegenden
+      Alphabetes bestimmt und gemae3 dieser "gemessenen" Haufigkeiten neue
+      zufaellige Sequenzen mit der gleichen Laenge wie die urspruengliche
+      Sequenz erzeugt.
+
+      CUUUUGCUAG
+
+          |
+	  V
+      
+      A => 0.1             UGUACGCUGA
+      C => 0.2    -----\   ACCUUCAUCU
+      G => 0.2    -----/   UCUUCCUCCC
+      U => 0.5             GUGCAUUUGU
+
+      (Anmerkung: Diese Methode liefert natuerlich nur im statistischen
+       Mittel Zufallssequenzen mit den urspruenglich gemessenen Buchstaben-
+       haeufigkeiten. Jede einzelne Sequenz kann stark von diesen abweichen.)
+
+(1) Zufallssequenzen (unter Erhaltung der Buchstabenhaeufigkeiten):
+
+  (b) SHUFFELN: Schreibe ein Programm, das eine Sequenz einliest und
+      durch Vertauschen (= shuffeln) jedes Buchstabens mit einem
+      zufaellig gewaehlten anderem Buchstaben aus der urspruenglichen
+      Sequenz eine neue Zufallssequenz erzeugt. Die Anzahl der
+      Vertauschungen soll um eins kleiner sein als die Zahl der
+      Buchstaben in der Orginalsequenz.
+      
+      C <-+ G     G     G     G     G     G     G     G     G
+      U   | U <-+ C     C     C     C     C     C     C     C
+      U   | U   | U <-+ U     U     U     U     U     U     U
+      U   | U   | U   | U <-+ C     C     C     C     C     C
+      U   | U   | U <-+ U   | U <-+ G     G     G     G     G
+      G <-+ C <-+ U     U   | G   | G <-+ A     A     A     A
+      C     C     C     C <-+ U   | U   | U <-+ G     G     G
+      U     U     U     U     U   | U   | U   | U <-+ U     U
+      A     A     A     A     A   | A <-+ G <-+ U   | U <-+ U
+      G     G     G     G     G <-+ U     U     U <-+ U <-+ U
+
+      (Anmerkung: Diese Methode erhaelt exakt die Haeufigkeiten der
+       Buchstaben der Orginalsequenz und wird ueblicherweise als
+       Fisher-Yates oder Knuth shuffling bezeichnet.)
+
+(2) Zufallssequenzen (unter Erhaltung von k-lets)
+
+    Schreibe ein Programm, das eine Sequenz einliest und eine zufaellige
+    Sequenz erzeugt, welche die gleichen k-let Haeufigkeiten besitzt wie
+    die Orginalsequenz. Ein k-let ist eine Subsequenz der Laenge k (z.B. beim
+    Dinukleotidgehalt von Nukleinsaeuren ist k=2).
+
+    Der k-let Shuffling Algorithmus funktioniert wie folgt:
+
+    (a) Wenn die Sequenz k-let geshuffelt werden soll, bestimme man alle
+        Subsequenzen der Laenge k-1. Fuer Dinukleotid shuffling ist
+        dies das Sequenzalphabet, fuer Trinukleotide shuffling sind das alle
+        Dinucleotide, usw.
+
+    (b) Die unter (a) bestimmten Subsequenzen bilden die Ecken eines
+        Graphen, welcher anfaenglich keine Kanten besitzt.
+
+	 CUUUUGCUAG                 
+                                    
+             | fuer k=2             
+	     V                      
+	                            
+	    A     U                  
+                                    
+	    
+             
+             G    C                    
+                                    
+    (c) Nun geht man die urspruenglichen Sequenze durch und setzt fuer
+        alle aufeinanderfolgenden k-lets eine entsprechende gerichtete
+        Kante in den Graphen ein, wobei zwei Ecken auch durch mehrere
+        Kanten verbunden sein koennen. Somit wird ein sogenannter
+        gerichteter Multigraph aufgebaut.
+	 
+	 CUUUUGCUAG                      +-----+
+                                         |+---+|
+             | fuer k=2                  ||+-+||
+	     V                           ||| |||
+	                                 vvv |||
+	    A     U                  A<---U--+++
+                             ->      |  / ^^	
+	                             | /  ||	
+				     vv   ||	
+	     G    C                   G-->C     
+
+
+    (d) Jeder Eulerpfad in diesem Multigraphen entspricht einer
+        geshuffelten Version der uespruenglichen Sequenz unter
+        Erhaltung der k-let Haeufigkeiten. Ein Eulerpfad durchwandert jede
+        Kante des (Multi)Graphen exakt 1x. Ein wiederholtes Besuchen von
+	Knoten ist hierbei erlaubt.
+
+    (e) Die gro3e Kunst ist nun eine Methode zu finden die aus
+        allen moeglichen Eulerpfaden im Multigraphen statistisch
+        gleichverteilt welche ziehen kann um mehrere Zufallssequenzen 
+        zu erzeugen. 
+	Die beiden Paper kandel-DAM-96.pdf und jiang-BMC-Bioinf-08.pdf, 
+        setzen sich mit diesem Problem auseinander:
+
+        1. Kandel D et al (1996) Shuffling biological sequences.
+           Discete Appl Math 71:171-185
+           doi:10.1016/S0166-218X(97)81456-4
+	   
+        2. Jiang M et al (2008) uShuffle: a useful tool for shuffling
+           biological sequences while preserving the k-let counts.
+           BMC Bioinformatics 9:192
+           doi:10.1186/1471-2105-9-192
+	  
+        Beide Publikationen sind im Moodle verlinkt.
+
+Happy Hacking!

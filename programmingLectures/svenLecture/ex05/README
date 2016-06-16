@@ -1,0 +1,133 @@
+Liebe APBC-ler/innen,
+ 
+Schreibe einen Substruktur Sucher, der zwei Graphen, einen Querry Graphen
+G_q und einen Target Graphen G_t, als Input nimmt und als Output saemtliche
+Stellen an denen der G_q in G_t vorkommt zurueckliefert.
+
+Im graphtheoretischen Kontext, soll ein Checker implementiert werden, der
+fuer einen Targetgraphen G_t testet, ob ein Subgraph-Isomorphismus mit dem
+Querry Graphen G_q existiert. Ein Subgraph Isomorphismus zwischen den
+beiden Graphen G_q und G_t existiert genau dann, wenn sich alle Knoten von
+G_q auf ein Subset der Knoten von G_t abbilden lassen und zwar unter der
+Bedingung, dasz gleichzeitig auch alle Kanten zwischen den Knoten von G_q
+auf dementsprechende Kannten von G_t abgebildet werden. (In anderen Worten
+bei der Abbildung mussen die Nachbarschaftsbeziehungen (Adjazenz) der
+einzelnen Knoten erhalten bleiben.)
+
+Es ist gezeigt worden, dasz das Subgraph Isomorphismus Problem
+NP-vollstaendig ist, es existiert also kein Algorithmus der das Problem in 
+polinomieler Zeit loest.
+
+Graphen Input Format:
+
+# Knoten
+Gesammtzahl_der_Knoten
+Nummer_des_Knotens Label_des_Knotens
+...
+
+# Kanten
+Gesammtzahl_der_Kanten
+Nummer_des_Startknotens Nummer_des_Stopknotens Label_des_Knotens
+...
+
+sprich der folgende Ecken und Kanten gelabelte chemische Graph:
+
+                  O
+                  :
+                  C
+                -   -
+           C - N     C
+	  :     -
+	 C       C
+	  -     -
+	   C - N
+                -
+		 C
+
+sieht als Input File wie folgt aus:
+
+# Knoten
+10
+1 N
+2 C
+3 N
+4 C
+5 C
+6 C
+7 C
+8 C
+9 O
+10 C
+
+# Kanten
+10
+1 2 -
+1 8 -
+2 3 -
+3 4 -
+3 7 -
+4 5 -
+5 6 :
+6 1 -
+8 9 :
+8 10 -
+
+Subgraph Isomorphismen lassen sich als Arrays darstellen, wobei der
+Array-Index den Knoten im G_q bezeichnet und der Array-Value die Abbildung
+dieses Knotens in G_t bezeichnet. Der folgende Querry Graph (G_q)
+
+                 2
+
+                 C
+                -
+        1  C - N   4
+	        -
+		 C
+
+		 3
+		 
+kommt im obigen Graphen an zwei Stellen vor womit die beiden folgenden
+Subgraph Isomorphismen entstehen:
+
+ C  C  C  N
+ 1  2  3  4    Knoten Index in G_q
+ 
+[6, 8, 2, 1]   Knoten Index in G_t
+[4, 2, 7, 3]
+
+
+happy hacking
+
+
+Tipps:
+
+(1) Repraesentation von Graphen im Computer findet ihr unter
+    http://de.wikipedia.org/wiki/Adjazenzliste
+
+(2) Die m!/(m-n)! moeglichen Abbildungen der n Knoten von G_q auf die m
+    Knoten des G_t (sprich der Gesammtraum der Abbildungen von den nur ein
+    winziges Subset echte Subgraph-Isomorphismen sind) lassen sich
+    systematisch in einem Baum speichern.
+
+(3) Fuer das Auffinden aller Subgraph Isomorphismen musz der Baum der
+    Abbildungen durchsucht werden. Heuristiken, die moeglichst frueh
+    erkennen ob in einem bestimmten Subbaum ein Isomorphismus enthalten
+    ist kann oder nicht und dementsprechend die Suche im Subbaum
+    abbrechen, koennen das Auffinden der Isomorphismen gegenueber einer
+    exhaustive search stark beschleunigen.
+
+(4) Es ist einfacher nur Knoten-Lables zu beachten und die
+    Kanten-Lables zu ignorieren. Dies ist natuerlich fuer chemische
+    Graphen eine "unzulaessige" Vereinfachung ;)
+
+(5) Einen nicht mehr ganz neuen aber recht guten Review zum Thema
+    "Substructure Searching Problem" findet ihr unter
+    http://dx.doi.org/10.1021/ci00014a001 und einen sehr
+    ausfuehrlichen Review zum Thema "Graph Matching" findet ihr unter
+    http://dx.doi.org/10.1142/S0218001404003228. Ein sehr beliebter
+    und effizienter Algorithmus um das gestellte Problem zu loesen
+    wurde von Ullmann schon 1976 publiziert. Die Publikationen sind
+    auch auf Moodle verlinkt. Der Algorithmus wird in einem Foliensatz
+    von Wolf-Dieter Vogl en detail vorgestellt,
+    http://oldwww.prip.tuwien.ac.at/teaching/ss/strupr/vogl.pdf
+

@@ -1,0 +1,66 @@
+(1) Manhatten Tourist Problem: Das Stra3ennetz von Manhatten kann als gewichtetes 
+    Gitter aufgefasst werden, wobei die Gewichte an den Kanten des Gitters die Anzahl
+    der Sehenswuerdigkeiten angibt, die entlang dieses Stra3enstuecks zu finden sind.
+    Das Manhatten Tourist Problem besteht darin, den kuerzesten Pfad mit dem 
+    maximalen Gesamtgewicht zu finden der in der linken oberen Ecke des Gitters 
+    startet und in der rechten unteren Ecke endet.
+
+       start here
+       |
+       v
+       +--3--+--3--+ 
+       |     |     | 
+       1     0     2
+       |     |     | 
+       +--3--+--2--+ 
+       |     |     | 
+       4     6     5 
+       |     |     | 
+       +--0--+--7--+
+                   ^
+		   |
+		   end here
+     (Diese Illustration braucht Textdarstellung mit konstanter Zeichenbreite)
+
+     Euer Programm soll zwei Matrizen mit den Gewichten des Gitters in West-Ost und
+     Nord-Sued Richtung einlesen. Sprich fuer das obige Beispielgitter sieht der
+     Input wie folgt aus:
+
+     # west-east streets
+     3 3
+     3 2
+     0 7
+     # north-south streets
+     1 0 2
+     4 6 5
+     
+     Natuerlich sollen verschieden gro3e und gewichtete Matrizen eingelesen werden 
+                                        koennen ;)
+(2) Wechselgeld-Problem: Ein Kunde bezahlt mit einem Geldschein. Das Restgeld wird 
+    vom Kassier in Muenzen herausgegeben. Das Wechselgeld-Problem besteht nun darin 
+    bei einer gegebenen Stueckelung an Muenzen dem Kunden das Restgeld in der 
+    geringsten Anzahl an Muenzen herauszugeben. Am Beispiel Preis 4.23 Euro; Kunde 
+    zahlt mit 5 Euro Schein; Muenzenstueckelung ist 1, 2, 5, 10, 20, 50 Cent Muenzen.
+    
+    Rueckgeld 1 x 50 ct,
+              1 x 20 ct,
+	      1 x  5 ct,
+	      1 X  2 ct  (Kunde ist gluecklich!)
+
+    Rueckgeld 77 x 1 ct (der Kunde tobt!!!)
+
+    Das Programm soll als command-line-option den Restgeldbetrag und die 
+    Muenzstueckelung einlesen. Als Output soll die optimale Anzahl der benoetigten 
+    Wechselmuenzen, sowie eine detailierte Auflistung der Muenzsorten und die jeweilig 
+    benoetigte Anzahl zurueck geliefert werden.
+
+Beide Aufgaben sollen mittels Dynamic Programming geloest werden.
+
+Zusatzhinweis: Wer fuer (2) keine Idee hat, kann alternative den
+Algorithmus verwenden der in "Efficient Mass Decomposition", Sebastian
+Boecker and Zsuzsanna Liptka, ACM Symposium on Applied Computing, 2005
+Absatz 2.2 beschrieben wurde. Dieser ist in der Lage Speichereffizient
+nicht nur die beste(n) Loesugn(en) sondern alle moeglichen Loesungen
+zu generieren. Das Paper is auf Moodle verlinkt.
+
+happy hacking

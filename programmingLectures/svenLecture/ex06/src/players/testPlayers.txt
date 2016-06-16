@@ -1,0 +1,3 @@
+r	./players/randomBots/randomBot1.sh
+R	./players/randomBots/randomBot2.sh
+A	python ./players/ge_BotDirectPath.py

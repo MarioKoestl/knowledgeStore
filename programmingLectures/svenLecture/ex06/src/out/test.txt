@@ -1,0 +1,16 @@
+--------------------------
+board:
+^^^^
+^^A^
+^$~ 
+
+
+configs:
+stopCriterion:c
+numberOfCoins:44
+
+board data:
+remaining coins:None
+player sequence:sepp->hugo->karl
+player coins:
+--------------------------

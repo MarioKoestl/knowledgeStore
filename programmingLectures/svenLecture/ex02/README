@@ -1,0 +1,48 @@
+Liebe APBC-ler/innen,
+
+Hier das zu loesende Uebungsbeispiel namens "Verwaltungsverteilung":
+
+Der Foederalstaat A moechte seine Verwaltung modernisieren durch Einrichtung von
+vier neuen Bundesaemtern fuer Allgemeine Aufgaben. Im Sinne des
+Regionalprozes sollen diese so auf die acht Flaechenlaender verteilt werden,
+dass sich je zwei Landeshauptstaedte ein Amt teilen. Die Menge der Hauptstaedte
+
+ {B,E,G,I,K,L,P,S}
+ 
+soll also in vier jeweils zwei-elementige Teilmengen (Tupel)
+partitioniert werden. Die Kosten einer solchen Zerlegung ergeben sich als
+Summe ueber die Kosten der vier plazierten Aemter. Die Kosten eines
+Amtes ergeben sich aus den zwei gewaehlten Standorten und ist folgender
+symmetrischer Matrix zu entnehmen (in Millionen Euro / Jahr).
+
+8 10                     # Anzahl der Staedte und Kostenlimit
+ B  E  G  I  K  L  P  S  # Staedtenamen
+ - 10 10  2 10 10 10 10  # symetrische Kostenmatrix
+10  -  2 10 10 10  1 10
+10  2  - 10  2  3  3  3
+ 2 10 10  -  4 10 10  2
+10 10  2  4  - 10 10  3
+10 10  3 10 10  -  2  2
+10  1  3 10 10  2  - 10
+10 10  3  2  3  2 10  -
+
+Die Bundesregierung stellt fuer die neuen Aemter bis zu 10 Millionen Euro
+jaehrlich zur Verfuegung und moechte alle Loesungen wissen, die damit
+finanzierbar sind.
+
+Das Problem soll natuerlich auch fuer einen Foederalstaat B mit einer
+andern Anzahl an Bundeslaendern und anderen Kosten mit eurem Programm
+zu loesen sein. Lest daher bitte die Matrix aus dem File input.txt
+aus, so dass man mit beliebigen Datein im gleichen Format das Problem
+loesen kann.
+
+
+Tipps:
+======
+
+(1) Es handelt sich bei der Aufgabe um ein Optimierungsproblem, bei dem
+    bereits eine untere Kostenschranke gegeben ist. Das legt als
+    Loesungsstrategie eine "branch-and-bound" Heuristik nahe, vereinfacht
+    dadurch, dass die Schranke waehrend der Suche nicht angepasst werden muss.
+    
+happy hacking

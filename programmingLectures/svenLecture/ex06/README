@@ -1,0 +1,78 @@
+Liebe APBC-ler/innen,
+
+Dies ist die letzte Übungsaufgabe für dieses Semester. Diesmal sollen
+alle zusammen an einem Gemeinschaftsprojekte arbeiten und dabei
+gemeinsam git als Revision Control System verwenden. Nicht vergessen
+vor jedem push ein pull zu machen, um die lokale Kopie mit der auf
+github zu synchronisieren.
+
+Nun zum Gemeinschaftsprojekte:
+
+Ziel ist es diesmal ein "Brettspiel" zu implementieren. Die Aufgabe
+laesst sich im wesentlichen zwei teilen: 1) das Spielbrett und 2) die
+Spielfiguren. Das erste soll gemeinsam von euch entworfen und
+programmiert werden, wohingegen jeder Teilnehmer einen eigene
+Spielfigur beisteuern soll. Im weiteren bekommt ihr einige Tipps und
+Hinweise wie ihr die beiden Teile umsetzen koenntet.
+
+1) Spielbrett:
+
+- Das Brett koennte als Gitter aufgebaut sein in dem jedes Feld
+  bestimmte Eigenschaften hat. Im wesentlichsten gibt es Felder, die
+  man gefahrlos betreten kann und andere bei denen etwas passiert.
+  Das Brett koennte zum Beispiel aus Flaechen mit Wasser und
+  Landflaechen bestehen. Auf letzteren kann man sich bewegen und im
+  Wasser geht man unter.
+
+- Auf dem Spielbrett erscheint nacheinander eine bestimmte Anzahl an
+  Gegenstaenden, die von den Spielern moeglichst schnell eingesammelt
+  werden sollen. Der Spieler der am Ende die meisten Gegenstaende hat
+  hat gewonnen.
+
+- Zu Beginn werden die Spielfiguren gleichmaessig ueber das Brett
+  verteilt.
+
+- Das Spielbrett ist der "Server", der die Spielfiguren (Clients) in
+  jeder Runde nach ihrem naechsten Schritt fragt und die Aktionen dann
+  ausfuehrt. Das Spiel muss nicht als Client-Server Architektur
+  aufgebaut werden, es muss aber eine einfache Kommunikation zwischen
+  dem Spielbrett (momentaner Zustand, wo sind die Spieler, wo ist der
+  naechste Gegenstand, etc.) und den Spielfiguren (was ist mein
+  naechster Schritt) implementiert werden. Hier solltet ihr eine Art
+  Protokoll entwerfen.
+
+- Fuer die Entwicklung des Spiel macht es sicher Sinn ein fixes Brett
+  vorzugeben. Um den Spielspass aber moeglichst lange zu erhalten und
+  das Spiel an unterschiedliche Spielerzahlen anpassen zu koennen,
+  solltet ihr darueber nachdenken wie man zufaellige neue Spielbretter
+  beliebiger Groesse generieren koennte.
+
+2) Spielfiguren:
+
+- Spielfiguren sind Objekte die sich selbststaendig auf dem Brett
+  bewegen sollen, um moeglichst schnell Gegenstaende
+  einzusammeln.
+
+- Ueberlegt euch eine Moeglichkeit wie entschieden wird welcher
+  Spieler wann an der Reihe ist.
+
+- Wenn eine Figur das Brett verlaesst muss sie "bestraft" werden
+  (verliert zum Beispiel alle gesammelten Gegenstaende). Sie wird
+  anschliessend natuerlich wieder auf das Brett zurueck gesetzt.
+
+- Eine Interaktion zwischen Figuren ist moeglich. So koennen nicht
+  zwei Figuren gleichzeitig auf dem gleichen Feld stehen. Sie schieben
+  sich gegenseitig weiter.
+
+- Was der naechste clevere Schritt ist - schnell zum naechsten
+  Gegenstand oder doch lieber auf eine zentrale Position gehen, um
+  bessere Chancen auf den naechsten Gegenstand zu haben - soll jede
+  Spielfigure autonom entscheiden.
+
+Dies soll einmal das Geruest sein an dem ihr euch orientiert und ein
+schoenes Spiel implementiert. Ob ASCII Art im Terminal oder GUI ist
+euch ueberlassen ;)
+
+Ich freue mich schon mit euch zu spielen!
+
+Happy hacking bis 29.06.2016
