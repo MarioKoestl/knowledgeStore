@@ -48,6 +48,8 @@ IdentityFile ~/.ssh/id\_rsa\_github
 	show the difference between the current file and the file in the repository
 \subsection{\texttt{git rm}}
 	removes a file from the git repository and from the file system, changes are recognized now by commit and push	
+	
+	if you removed a file from the disc but in githubm than you have to use git add -u filename to let git recognize it
 \subsection{\texttt{git clone} SSH address project}
 		copies an entire gitlab project to the current folder
 \subsection{\texttt{git checkout} file1 }
@@ -91,7 +93,7 @@ IdentityFile ~/.ssh/id\_rsa\_github
 			take the current branch and set it as head to branch1
 			Caution: merges can occur
 	\end{itemize}
-\section{Get back in the git History, not working}
+\section{Get back in the git History, only working on local, not on repository(github cannot do this)}
 	\begin{enumerate}
 		\item \texttt{git log} (show all commits)
 			\includegraphics[width=8cm,height=8cm]{pictures/gitLog.png}
