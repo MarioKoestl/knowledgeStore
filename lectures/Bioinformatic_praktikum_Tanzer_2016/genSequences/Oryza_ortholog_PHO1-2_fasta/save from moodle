@@ -1,0 +1,256 @@
+Day 1, Monday, 25.1.2016
+
+theoretical stuff:
+
+
+model system is Oryza sativa Japonica(rice)
+PHO1-2 gen = phosphat-transporter in plants
+Sense and antisense strand can form intermolecular secondary structures
+
+PHO gene and corresponding antisense mRNA
+
+Absent of water lead to same amount of antisense mRNA, but increases expression of the corresponding PHO genes. Maybe RNA regulate gen expression by formation of secondary structures, on translation level, therefore binding to the PHO1-2 mRNA transcript . Trying to find evolutionary conserved functional RNA secondary structures via bioinformatic algorithms.
+important definitions:
+
+PARALOG: gen duplikation from an ancester, all gens are related by a common ancester gen
+ORTHOLOG: gen duplication within onr species, like hox genes (gen clusters)
+SNIPES :
+BIOTYPES:
+UTR = untranslated region, can be located before the first exon, for example promoter and regulatory regions.
+GENOMIC SEQUENCE = all Exons, Introns and UTRs
+
+Blast related things
+
+  BLASTN for nucleotids
+  BLASTP for proteins
+
+  E_value(expected Value) = random background noise, chance to see te same hit randomly in the database.
+                Value of 1 means that this hit could also be expected with 100% randomly.
+                The lower the E_value to more significant is the hit
+
+  Sensitivity =  ??
+
+console programing things
+
+for i in *.fa; do echo $i; done
+
+for i in *.fa; do sed '/^>/ d' < $i> new/$i; done  = delete all lines starting with > from all .fa files
+
+for i in *.fa; do perl -ne 'next if /^\s/; print' $i > New/$i;  done
+
+remove all blanks from file and create new file =   perl -ne 'next if /^\s/; print' filename > new/newFilename done
+
+-e = execute
+-n = file input
+'' = code inside
+//regular expression
+^ file begin
+\s blank symbol
+next = befehl(nächste zeile verwenden)
+
+for i in *.fa; do perl -ne 'next if /^\s/; print' $i > New/$i;  done
+
+Multifastafile creating with cat 
+cat *.fa > fasta_all
+
+which program_name = path of programm
+
+change programName Path in bashrc
+
+gedit .bashrc im home
+
+Variable PATH stores all programPaths
+
+# set PATH so it includes Perls if it exists
+if [ -d ~/Perls ] ; then
+    PATH=~/Perls:"${PATH}"
+fi
+
+Abstand bei den [] ganz wichtig!!!!!!
+
+Rscript scriptname
+
+append the new path to the PATH variable
+
+program search goes from left to right, so the last set Path is checked as first
+
+source .bashrc to update changes
+TASKS:
+
+    find the sequence of all ortholog genes for PH01-2 found in Oryza sativa Japonica.
+    Take the gene anotation from the plants.ensembl.org homepage
+    get all other orthologs from the other paralogs gens of PHO1-2
+
+
+
+organism    :    oryza sativa japonica
+Genome assembly    :    IRGSP-1.0
+genName        :    Phosphate transporter PHO1-2 [Source:UniProtKB/Swiss-Prot;Acc:Q6K991]
+genID        :    OS02G0809800
+genType        :    proteincoding
+genLocation    :    Chromosome 2: 34,609,725-34,615,015 forward strand.
+
+paralogs          : PHO1-1, PHO1-3,OS12GO595000
+TranscriptID    :    OS02T0809800-01
+
+ 
+ for PHO1-2
+Orthologs        :    GenID        :    TranscriptId
+
+PHO1-2_Orthologs organism 	gen Id 	transcript id
+oryza sativa japonica 	OS02G0809800 	OS02T0809800
+Oryza barthii  	OBART02G36740 	OBART02G36740.1
+Oryza brachyantha 	OB02G43470 	OB02G43470
+Oryza glaberrima 	ORGLA02G0319600 	ORGLA02G0319600.1
+Oryza glumaepatula 	OGLUM02G37950 	OGLUM02G37950.1
+Oryza longistaminata 	KN540772.1_FG001 	KN540772.1_FGT001
+Oryza meridionalis 	OMERI02G34660 	OMERI02G34660.1
+Oryza nivara 	ONIVA02G39570 	ONIVA02G39570.1
+Oryza punctata 	OPUNC02G33940 	OPUNC02G33940.1
+Oryza rufipogon  	ORUFI02G38260 	ORUFI02G38260.1
+Oryza sativa Indica 	BGIOSGA009251 	BGIOSGA009251-TA
+		
+
+For PHO1-1 gen
+not yet done
+
+
+Fasta Identifiers
+
+>oryza_sativa_japonica_PHO1-2_F200_Gen    = gen sequence
+>oryza_sativa_japonica_PHO1-2_F200_Tr    = transcript sequence(genomic sequence)
+
+Multifastafile creating with cat 
+
+cat *.fa > fasta_all
+
+Day 2, Tue, 26.1.2016 (MSA)
+
+creating multiple sequence alignments with transcript fasta files for each orthologs
+
+alignment with MAFFT
+
+belvu for MSA viewer
+RNAalifold for consensus structure
+
+installing mafft with extensions, non root user (installing is straightforward described on homepage) 
+
+Day 3, Wed, 27.1.2016 (structure predictions)
+
+Consensus structure prediction : what is best structure that all sequeces could fold. Note that Compensatorische mutations could still form the same structure.
+
+RNAalifold : global
+
+color sheme
+Red = same base-pairs for this consensus,
+Green = different base-pairs for this consensus
+blass = one sequence cannot form this consensus base-pair
+Ring around base = this base changes through the alignment
+Greener relates to more conservation tha red
+
+
+RNALalifold : local
+ --span can determine the max distance if a basepair should be choosen
+ -L is 70 to 100nt , -L 100 is used
+local structure prediction is more meaningful here, but because the gene sequences are long(ca. 2000nt)
+
+no orthology for antisense RNA is available
+Take the Gene area, make complementary. and try to make MSA, check if conserved
+antisense Introns are more relevant, because exons have to be conserved due to the conservation of the sense strand gene. Therefore the relevant thing is if the antisense introns are also conserved --> conservation of a specific antisense mRNA structure.
+
+consensus structure prediction:
+It is not possible to gain meaningful global consensus structures with RNAalifold
+RNALalifold is used with --span=100
+
+studies consensus Areas:
+AREA 9171-9270
+(((((...((((((..(((((((.....((((.....(((((..(((..((....)).))))))))...)))).......))))))).))))))))))). (-25.20) 9171 - 9270
+
+cut out from clustal file via script cutout.pl,  stored in the Programs/bin folder ( set BIN_PATH) variable in bashrc
+or cut out from belvu through middle mouse taste, and remove all left/right and save
+this area is chosen and RNAalifold used ( new clustalW for this area, and so on)
+
+due to red, not meaningful for condervation study, choose other area
+
+AREA 8678-8773
+(((((.....((((.(((((...................)))))...))))(((((......)))))((((((........))))))...))))). (-25.80) 8678 - 8773
+
+same as aboth, too many red areas to be really important for conservation search
+
+Area 4979-5079
+(((((((...((((......)))).....(((((((.....(((..((.((((....))))..))..)))...))))))).(((....)))))))...))) (-18.15) 4979 - 5079
+
+even worse
+
+Better try it with
+
+RNALfold -z-3  : 
+check if this found structure is unnaturally stable
+z-score : (E-mittelwert) / standardabweichung
+RNAlfold -z only for oryza-satira .. gen
+Result areas are possible evolutionary conserved structures
+
+compare RNAlfold -z with RNALalifold
+
+
+
+task:
+wo ist antisenseRNA?, get
+
+2013 - 2345
+
+Annahme:
+Exon bereich des Gens is ebenfalls in antisense conserviert
+Intron bereich ist nicht konserviert in Gen, könnte aber strukurelle wichtige funktion haben, also struktur conserviert( aber compensatorische mutationen könne trozdem da sein, eigentlich erwünscht)
+
+Task:
+Bereich finden auf antiseense transcript der INTron entspricht
+
+zuerst negativ kontrolle, ist exon auch auf antisense conserviert
+OS02T0809800-01.exon3	34,610,413	34,610
+,704	0	1	292
+Exon beginnt am gen an position 688 (5' -->3')
+Exon beginnt im alignment an position 1882
+
+Kontrolle mit negativ strand ergibt ebenfalls eine conservierung --> CHECK
+
+
+
+Day 4, Thu, 28.1.2016 (auch was)
+
+emacs used as MSA viewer
+like bashrc to configure the  ~/.emacs file
+
+ralee-mode is used in emacs for alignments
+
+subtract [16] from each column counter, because the fasta header is also counted
+
+Taks:
+
+- gibts im Bereich der exons im antisensese strang staistisch weniger secondärsturkuturen als in den Introns(Willcoxs test, with R)
+
+    download of intron and exon sequences from PHO1-2 transcript seq
+    MSA, and find all Exons/Introns number match in every seq
+    cut every exon/intron from the alignment in separeted files
+    make global alignment with RNAalifold, output as csv file
+    MFE structure calculation for every found consensus structure
+    Willcoxs test which structures are more stable ( Intron or Exons)
+    Expected result: instable structures with exons, because Exons should interact with regions of the other strand
+
+
+completes alignment nur für alle Exons, und für alle introns, danach vergleichen
+einzelnen exons suchen, mit RNAalifold --cvs output vergleichen
+
+fsvile, aug spalte 2 bei csv rausholen
+
+alle mfe für /alle EXONS, Introns
+
+
+
+
+
+
+
+
+
+

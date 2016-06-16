@@ -1,0 +1,38 @@
+1. general things
+
+important facts about RNA, DNA
+  -junk dna
+  -c value paradoxon
+  -genex regulation
+  -micro RNAs 
+    Dicer, RISC, si-RNAs, mi-RNAs
+    c elegans sensor system
+      ph-sensor,Hcl sensor, expression of mi-RNA
+    Xist RNA
+    
+building blocks of nucleic acids
+  -Basen
+  -RNA strukturen
+    bewegungswinkeln
+    Pucker
+    anti, syn
+    basepairs
+  -helix parameters
+  minor, major groove
+    
+    
+2. secondary structures
+  - difference in information content of secondary structures protein <--> RNA
+  - different representations of secondary structures
+    circle plot
+    graph representation
+    dot bracket
+    Mountain rpresentation
+    dot plot
+  - recursion shemata
+    nussinov algorithm
+      O() and CPU O()
+    zucker and sankoff algorithm scheme, amount of possible structures on Xi-Xj
+      how does this solution look like in a diagonal matrix, where is the final score, how to get to any point in the matrix
+      
+    

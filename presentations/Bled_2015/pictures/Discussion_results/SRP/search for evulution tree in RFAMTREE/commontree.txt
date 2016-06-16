@@ -1,0 +1,79 @@
+Bacteria
++ Spirochaetes
++ + Borreliella bavariensis PBi
++ Proteobacteria
++ + Betaproteobacteria
++ + + Nitrosomonadales
++ + + + Nitrosomonas eutropha C91
++ + + Hydrogenophilales
++ + + + Thiobacillus denitrificans ATCC 25259
++ + + Burkholderiales
++ + + + Burkholderiaceae
++ + + + + Ralstonia
++ + + + + + Ralstonia pickettii 12J
++ + + + + Burkholderia
++ + + + + + pseudomallei group
++ + + + + + + Burkholderia pseudomallei
++ + + + + + + + Burkholderia pseudomallei 668
++ + + + + + + Burkholderia thailandensis
++ + + + + + + + Burkholderia thailandensis E264
++ + + + + + + Burkholderia mallei
++ + + + + + + + Burkholderia mallei ATCC 23344
++ + + + + Cupriavidus
++ + + + + + Cupriavidus pinatubonensis
++ + + + + + + Ralstonia eutropha JMP134
++ + + + + + Cupriavidus taiwanensis
++ + + Neisseriales
++ + + + Chromobacteriaceae
++ + + + + Pseudogulbenkiania
++ + + + + + Pseudogulbenkiania ferrooxidans 2002
++ + + + + Chromobacterium group
++ + + + + + Chromobacterium violaceum ATCC 12472
++ + + + Neisseriaceae
++ + + + + Neisseria meningitidis Z2491
++ + delta/epsilon subdivisions
++ + + Wolinella succinogenes
++ + Gammaproteobacteria
++ + + Pasteurellales
++ + + + Haemophilus influenzae PittEE
++ + + Vibrionales
++ + + + Vibrionaceae
++ + + + + Aliivibrio
++ + + + + + Vibrio fischeri ES114
++ + + + + Vibrio
++ + + + + + Vibrio vulnificus CMCP6
++ + + Enterobacteriales
++ + + + Enterobacteriaceae
++ + + + + Salmonella
++ + + + + + Salmonella enterica subsp. enterica
++ + + + + + + Salmonella enterica subsp. enterica serovar Agona
++ + + + + + + + Salmonella enterica subsp. enterica serovar Agona str. SL483
++ + + + + + + Salmonella enterica subsp. enterica serovar Schwarzengrund
++ + + + + + + + Salmonella enterica subsp. enterica serovar Schwarzengrund str. CVM19633
++ + + + + Yersinia
++ + + + + + Yersinia pseudotuberculosis complex
++ + + + + + + Yersinia pseudotuberculosis
++ + + + + + + + Yersinia pseudotuberculosis PB1/+
++ + + + + + + + Yersinia pseudotuberculosis IP 31758
++ + + + + + + Yersinia pestis
++ + + + + + + + Yersinia pestis CO92
++ + + + + + + + Yersinia pestis KIM10+
++ + + + + Escherichia
++ + + + + + Escherichia coli
++ + + + + + + Escherichia coli K-12
++ + + + + + + + Escherichia coli str. K-12 substr. MG1655
++ + + + + + + Escherichia coli O127:H6
++ + + Pseudomonadales
++ + + + Pseudomonas
++ + + + + Pseudomonas putida group
++ + + + + + Pseudomonas putida F1
++ + + + + Pseudomonas fluorescens group
++ + + + + + Pseudomonas protegens Pf-5
++ + + + + Pseudomonas syringae group
++ + + + + + Pseudomonas syringae group genomosp. 2
++ + + + + + + Pseudomonas savastanoi pv. phaseolicola 1448A
++ + + + + + Pseudomonas syringae group genomosp. 1
++ + + + + + + Pseudomonas syringae pv. syringae B728a
++ + + + + Pseudomonas aeruginosa group
++ + + + + + Pseudomonas aeruginosa
+-----------------------------------

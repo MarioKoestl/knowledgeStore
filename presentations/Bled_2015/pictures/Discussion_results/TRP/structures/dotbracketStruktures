@@ -1,0 +1,13 @@
+%trpL terminator
+AAGUUCACGGCAACGGCCGUGUCGGAUGAGAGUUAACAAAGAGAGUCUGCAAAUGAACACAUACAUUUCUCUUCACGGUUGGUGGCGUACCUCCCUCUUGCGGGCGGUGUAAUCGCGCAUAGCUGUCAUCUGACAAUGCAGAUUUCCUGAGCCCGCACCUGAUGCGGGCUUUUUUA
+.....((((((....)))))).....................................................((((((.((((((((((.(((......))).))))....))).))))))))).......................((((((((.....))))))))......
+
+%trpL antiterminator
+AAGUUCACGGCAACGGCCGUGUCGGAUGAGAGUUAACAAAGAGAGUCUGCAAAUGAACACAUACAUUUCUCUUCACGGUUGGUGGCGUACCUCCCUCUUGCGGGCGGUGUAAUCGCGCAUAGCUGUCAUCUGACAAUGCAGAUUUCCUGAGCCCGCACCUGAUGCGGGCUUUUUUA
+.....((((((....)))))).............................................................................(((((((((...((((..((((...((((....)))))))).)))).))...)))))))...................
+
+%trpL comparable with our structures
+UCCAGGCGUACCUCCCUCUUGCGGGCGGUGUAAUCGCGCAUAGCUGUCAUCUGACAAUGCAGAUUUCCUGAGCCCGCACCUGAUGCGGGCUUUUUUAU
+..((((((((((.(((......))).))))....))).))))))))).......................((((((((.....)))))))).......
+UGGUGGCGUACCUCCCUCUUGCGGGCGGUGUAAUCGCGCAUAGCUGUCAUCUGACAAUGCAGAUUUCCUGAGCCCGCACCUGAUGCGGGCUUUUUUAU
+...................(((((((((...((((..((((...((((....)))))))).)))).))...)))))))....................

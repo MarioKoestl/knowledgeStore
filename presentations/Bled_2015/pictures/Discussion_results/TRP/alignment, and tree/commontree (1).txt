@@ -1,0 +1,28 @@
+Gammaproteobacteria
++ Vibrionales
++ + Vibrionaceae
++ + + Photobacterium
++ + + + Photobacterium angustum S14
++ + + Vibrio
++ + + + Vibrio cholerae
++ + + + + Vibrio cholerae M66-2
++ + + + Vibrio harveyi group
++ + + + + Vibrio parahaemolyticus
++ Enterobacteriales
++ + Enterobacteriaceae
++ + + Salmonella
++ + + + Salmonella enterica subsp. enterica serovar Paratyphi A str. AKU_12601
++ + + Enterobacter
++ + + + Enterobacter sp. 638
++ + + Escherichia
++ + + + Escherichia coli O157:H7 str. EDL933
++ + + Yersinia
++ + + + Yersinia intermedia
++ + + + + Yersinia intermedia ATCC 29909
++ + + + Yersinia mollaretii
++ + + + + Yersinia mollaretii ATCC 43969
++ + + Serratia
++ + + + Serratia marcescens
++ + + Citrobacter
++ + + + Citrobacter freundii
+-----------------------------------

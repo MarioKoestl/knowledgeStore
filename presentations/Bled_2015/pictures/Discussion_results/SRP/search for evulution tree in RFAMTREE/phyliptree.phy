@@ -1,0 +1,65 @@
+(
+'Borreliella bavariensis PBi':4,
+(
+(
+'Nitrosomonas eutropha C91':4,
+'Thiobacillus denitrificans ATCC 25259':4,
+(
+'Ralstonia pickettii 12J':4,
+(
+'Burkholderia pseudomallei 668':4,
+'Burkholderia thailandensis E264':4,
+'Burkholderia mallei ATCC 23344':4
+)'pseudomallei group':4,
+(
+'Ralstonia eutropha JMP134':4,
+'Cupriavidus taiwanensis':4
+)Cupriavidus:4
+)Burkholderiaceae:4,
+(
+(
+'Pseudogulbenkiania ferrooxidans 2002':4,
+'Chromobacterium violaceum ATCC 12472':4
+)Chromobacteriaceae:4,
+'Neisseria meningitidis Z2491':4
+)Neisseriales:4
+)Betaproteobacteria:4,
+'Wolinella succinogenes':4,
+(
+'Haemophilus influenzae PittEE':4,
+(
+'Vibrio fischeri ES114':4,
+'Vibrio vulnificus CMCP6':4
+)Vibrionaceae:4,
+(
+(
+'Salmonella enterica subsp. enterica serovar Agona str. SL483':4,
+'Salmonella enterica subsp. enterica serovar Schwarzengrund str. CVM19633':4
+)'Salmonella enterica subsp. enterica':4,
+(
+(
+'Yersinia pseudotuberculosis PB1/+':4,
+'Yersinia pseudotuberculosis IP 31758':4
+)'Yersinia pseudotuberculosis':4,
+(
+'Yersinia pestis CO92':4,
+'Yersinia pestis KIM10+':4
+)'Yersinia pestis':4
+)'Yersinia pseudotuberculosis complex':4,
+(
+'Escherichia coli str. K-12 substr. MG1655':4,
+'Escherichia coli O127:H6':4
+)'Escherichia coli':4
+)Enterobacteriaceae:4,
+(
+'Pseudomonas putida F1':4,
+'Pseudomonas protegens Pf-5':4,
+(
+'Pseudomonas savastanoi pv. phaseolicola 1448A':4,
+'Pseudomonas syringae pv. syringae B728a':4
+)'Pseudomonas syringae group':4,
+'Pseudomonas aeruginosa':4
+)Pseudomonas:4
+)Gammaproteobacteria:4
+)Proteobacteria:4
+)Bacteria:4;

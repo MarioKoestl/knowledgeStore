@@ -1,0 +1,39 @@
+(
+(
+'Photobacterium angustum S14':4,
+(
+'Vibrio cholerae M66-2':4,
+'Vibrio splendidus 12B01':4,
+'Vibrio vulnificus YJ016':4,
+(
+'Vibrio campbellii HY01':4,
+'Vibrio alginolyticus 12G01':4,
+'Vibrio parahaemolyticus':4
+)'Vibrio harveyi group':4
+)Vibrio:4
+)Vibrionaceae:4,
+(
+'Photorhabdus luminescens subsp. laumondii TTO1':4,
+'Pectobacterium atrosepticum SCRI1043':4,
+'Escherichia coli O157:H7 str. EDL933':4,
+(
+'Salmonella enterica subsp. enterica serovar Paratyphi A str. AKU_12601':4,
+'Salmonella enterica subsp. enterica serovar Typhimurium':4
+)'Salmonella enterica subsp. enterica':4,
+(
+'Yersinia enterocolitica subsp. enterocolitica 8081':4,
+'Yersinia intermedia ATCC 29909':4,
+'Yersinia pseudotuberculosis IP 31758':4,
+'Yersinia mollaretii ATCC 43969':4
+)Yersinia:4,
+(
+'Serratia proteamaculans 568':4,
+'Serratia marcescens':4
+)Serratia:4,
+(
+'Enterobacter sp. 638':4,
+'Enterobacter aerogenes':4
+)Enterobacter:4,
+'Citrobacter freundii':4
+)Enterobacteriaceae:4
+)Gammaproteobacteria:4;

@@ -1,0 +1,674 @@
+CLUSTAL format alignment by MAFFT FFT-NS-i (v7.271)
+
+
+O.barthii_intro gtacgtcgtcgttgtgtctcgaatcaaatactaactaataaacgtgtattaattaatt--
+O.glaberima_int gtacgtcgtcgttgtgtctcgaatcaaatactaactaataaacgtgtattaattaatt--
+O.glumaepatula_ gtacgtcgtcgttgtgtgtcgaattaaatactaattaatatacg-----taattaatt--
+O.pindica_intro gtacgtcgtcgttgtgtctcgaatcaaatactaactaataaacgtgtattaattaatt--
+O.logistaminata gtacgtcgtccttgtgtctcgaatcaaatactaactaataaacgtgtattaattaatt--
+O.punctata_meri gtacgtcgtccttgtgtgtcgaattaaatactaattaatatacg-----taattaatt--
+O.nivara_intron gtacgtcgtcgttgtgtctcgaatcaaatactaactaataaacgtgtattaattaatt--
+O.punctata_intr gtacgtcgtcgcggtgt--cgaattaaacacggactaatatacgtgtattgattaatcct
+O.rufipogon_int gtacgtcgtcgttgtgtctcgaatcaaatactaactaataaacgtgtattaattaatt--
+O.sativa_intron gtacgtcgtcgttgtgtctcgaatcaaatactaactaataaacgtgtattaattaatt--
+                ********** . ****  *****.***.** .*.***** ***     *.******.  
+
+O.barthii_intro ---------------------------aatacacatttctgatgttaatacgtatgtgca
+O.glaberima_int ---------------------------aatacacatttctgatgttaatacgtatgtgca
+O.glumaepatula_ ---------------------------aatacacatttctgatgtttatacgtatgtgca
+O.pindica_intro ---------------------------aatacacatttctgatgttaatacgtatatgca
+O.logistaminata ---------------------------aatacacatttgtgatgttaatacgtatgtgca
+O.punctata_meri ---------------------------aatacacatttctgatgtttatacgtatgtgca
+O.nivara_intron ---------------------------aatacacatttctgatgttaatacgtatatgca
+O.punctata_intr ggcgaatacatatatacgccgtatatgtacacacatttctgatgtttatacgtatgtgca
+O.rufipogon_int ---------------------------aatacacatttctgatgttaatacgtatgtgca
+O.sativa_intron ---------------------------aatacacatttctgatgttaatacgtatgtgca
+                                            *.******** ******* ********.****
+
+O.barthii_intro tttcgcaggtat-aact------taattagttaatttgattgtaaataaaactaagtaat
+O.glaberima_int tttcgcaggtat-aact------taattagttaatttgattgtaaataaaactaagtaat
+O.glumaepatula_ tttcgcaggtataaaat------taattagttaatttgattgtaaataaaactaagtaat
+O.pindica_intro tttcgcaggtataaaat------taattagttaatttgattgtaaataaaactaagtaat
+O.logistaminata tttcgcaggtataaaat------taattaattaatttgattgtaaataaaactaagtaat
+O.punctata_meri tttcgcaggtataaaat------ttgttaattaatttgattgtaaataaaactaagtaat
+O.nivara_intron tttcgcaggtataaaat------taattagttaatttgattgtaaataaaactaagtaat
+O.punctata_intr tttcacaggtataaattaaactattactagcaattataatttgtaatattactaagtaaa
+O.rufipogon_int tttcgcaggtataaaat------taattagttaatttgattgtaaataaaactaagtaat
+O.sativa_intron tttcgcaggtataaaat------taattagttaatttgattgtaaataaaactaagtaat
+                ****.******* ** *      * ..**.. * * *.***   ****  ********* 
+
+O.barthii_intro taaatt---------------------------gattgtaaa---aatggagatgcatgg
+O.glaberima_int taaatt---------------------------gattgtaaa---aatggagatgcatgg
+O.glumaepatula_ taaatt---------------------------gattgtaaaatgatgggagatgcatgg
+O.pindica_intro taaatt---------------------------gattgtaaa---aatggagatgcatgg
+O.logistaminata taaattagtaattttttta-ataagaagaaaaagattgtaaa---aatggagatgcgtgg
+O.punctata_meri taaatt---------------------------gattgtaaa---aatggagatgcatgg
+O.nivara_intron taaatt---------------------------gattgtaaa---aatggagatgcatgg
+O.punctata_intr tacagtaaaaatgtttaaatttttgaagaaaaagattgtaat---aatggagat------
+O.rufipogon_int taaatt---------------------------gattgtaaa---aatggagatgcatgg
+O.sativa_intron taaatt---------------------------gattgtaaa---aatggagatgcatgg
+                ** * *                           ********    *  ******      
+
+O.barthii_intro atggatggtgtaggtaggtg----------------------------------------
+O.glaberima_int atggatggtgtaggtaggtg----------------------------------------
+O.glumaepatula_ atggatggtgtaggtaggtgg---caacaca-----------------------------
+O.pindica_intro atggatggtgtaggtaggtg----------------------------------------
+O.logistaminata atggatggtgtaggtgaacgcgttctacacggggcaggaggcggagctgctggcgcgcgg
+O.punctata_meri atggatggtgtaggtaggtg----------------------------------------
+O.nivara_intron atggatggtgtaggtaggtg----------------------------------------
+O.punctata_intr ---gatggtgtaggtaggtgacacacacacgta---------------------------
+O.rufipogon_int atggatggtgtaggtaggtg----------------------------------------
+O.sativa_intron atggatggtgtaggtaggtg----------------------------------------
+                   ************....*                                        
+
+O.barthii_intro ------------------------------------------------------------
+O.glaberima_int ------------------------------------------------------------
+O.glumaepatula_ ------------------------------------------------------------
+O.pindica_intro ------------------------------------------------------------
+O.logistaminata cgacgcnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+O.punctata_meri ------------------------------------------------------------
+O.nivara_intron ------------------------------------------------------------
+O.punctata_intr ------------------------------------------------------------
+O.rufipogon_int ------------------------------------------------------------
+O.sativa_intron ------------------------------------------------------------
+                                                                            
+
+O.barthii_intro ------------------------------------------------------------
+O.glaberima_int ------------------------------------------------------------
+O.glumaepatula_ ------------------------------------------------------------
+O.pindica_intro ------------------------------------------------------------
+O.logistaminata nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+O.punctata_meri ------------------------------------------------------------
+O.nivara_intron ------------------------------------------------------------
+O.punctata_intr ------------------------------------------------------------
+O.rufipogon_int ------------------------------------------------------------
+O.sativa_intron ------------------------------------------------------------
+                                                                            
+
+O.barthii_intro ------------------------------------------------------------
+O.glaberima_int ------------------------------------------------------------
+O.glumaepatula_ ------------------------------------------------------------
+O.pindica_intro ------------------------------------------------------------
+O.logistaminata nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+O.punctata_meri ------------------------------------------------------------
+O.nivara_intron ------------------------------------------------------------
+O.punctata_intr ------------------------------------------------------------
+O.rufipogon_int ------------------------------------------------------------
+O.sativa_intron ------------------------------------------------------------
+                                                                            
+
+O.barthii_intro ------------------------------------------------------------
+O.glaberima_int ------------------------------------------------------------
+O.glumaepatula_ ------------------------------------------------------------
+O.pindica_intro ------------------------------------------------------------
+O.logistaminata nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnngc
+O.punctata_meri ------------------------------------------------------------
+O.nivara_intron ------------------------------------------------------------
+O.punctata_intr ------------------------------------------------------------
+O.rufipogon_int ------------------------------------------------------------
+O.sativa_intron ------------------------------------------------------------
+                                                                            
+
+O.barthii_intro --------------------------------------------------acaccaacca
+O.glaberima_int --------------------------------------------------acaccaacca
+O.glumaepatula_ -------------------------------------------------aacaccaacca
+O.pindica_intro --------------------------------------------------acaccaacca
+O.logistaminata cgctacctcctctccggcctctcctcgccgcagtccatgtcaggtaggtgacaccaacca
+O.punctata_meri --------------------------------------------------acaccaacca
+O.nivara_intron --------------------------------------------------acaccaacca
+O.punctata_intr ---------------------------------------------cggcaacaccaacca
+O.rufipogon_int --------------------------------------------------acaccaacca
+O.sativa_intron --------------------------------------------------acaccaacca
+                                                                  **********
+
+O.barthii_intro ccca------------------cacacatgaatcctgggctagctgcacatctctttatg
+O.glaberima_int ccca------------------cacacatgaatcctgggctagctgcacatctctttatg
+O.glumaepatula_ cc--------------------cacacatgaatcctgg----gctgcacatctctttatg
+O.pindica_intro ccca------------------cacacatgaatcctgggctagctgcacatctctttatg
+O.logistaminata cc--------------------cacacatgaatcttggcctagctgcacatctctttatg
+O.punctata_meri cc--------------------cacacatgaatcctggcctagctgcacatctctttatg
+O.nivara_intron ccca------------------cacacatgaatcctgggctagctgcacatctctttatg
+O.punctata_intr ctcgccgcgcgcgtcacgtcgccacacatgaatcctgg-ctagctgcaca--tctttatg
+O.rufipogon_int ccca------------------cacacatgaatcctgggctagctgcacatctctttatg
+O.sativa_intron ccca------------------cacacatgaatcctgggctagctgcacatctctttatg
+                *.                    ************.***    ********  ********
+
+O.barthii_intro catgcaatgtcatgtcatgtcgatgtcgccgtcgtcgtcgtcgatggcgtg-ttttgcag
+O.glaberima_int catgcaatgtcatgtcatgtcgatgtcgccgtcgtcgtcgtcgatggcgtg-ttttgcag
+O.glumaepatula_ catgcaatgtcatgtcatgtcgatgtcgccgtcgtc---------------------cag
+O.pindica_intro catgcaatgtcatgtcatgtcgatgtcgccgtcgccgtcgtcgatggcgtg-ttttgcag
+O.logistaminata catgcaatgtcatgtcatgtcgatgtcgccgtcgtc---gtcgatggcgtgtttttgcag
+O.punctata_meri catgcaatgtcatgtcatgtcgatgtcgccgtcgtc---gtcgatggcgtg-ttttgcag
+O.nivara_intron catgcaatgtcatgtcatgtcgatgtcgccgtcgtcgtcgtcgatggcgtg-ttttgcag
+O.punctata_intr catgcatgggcgt--------catgtcgccgtcatggc--------------gtttgcag
+O.rufipogon_int catgcaatgtcatgtcatgtcgatgtcgccgtcgtcgtcgtcgatggcgtg-ttttgcag
+O.sativa_intron catgcaatgtcatgtcatgtcgatgtcgccgtcgtcgtcgtcgatggcgtg-ttttgcag
+                ******  * *.*         ***********..                      ***
+
+O.barthii_intro --------------------gttcgtc--caccggaagaagatccagcacgccgagaaga
+O.glaberima_int ------------------------------------------------------------
+O.glumaepatula_ --------------------gttcgtc--caccggaagaagatccagcacgccgagaaga
+O.pindica_intro ------------------------------------------------------------
+O.logistaminata gtgtcga----------agggcgcggcggtggcggacgaggcgacggcg-gcgctggagc
+O.punctata_meri ------------------------------------------------------------
+O.nivara_intron --------------------gttcgtc--caccggaagaagatccagcacgccgagaaga
+O.punctata_intr ------------------------------------------------------------
+O.rufipogon_int atgggagcctggagttgcaggttcgtc--caccggaagaagatccagcacgccgagaaga
+O.sativa_intron ------------------------------------------------------------
+                                                                            
+
+O.barthii_intro acatccgcgacgccttcatggcgctctaccgcggcctcgagctgctcaagaaattcaggc
+O.glaberima_int ----------------------------------------------------------gc
+O.glumaepatula_ acatccgcgacgccttcatggcgctctaccgcggcctcgagctgctcaagaaattcaggc
+O.pindica_intro ----------------------------------------------------------gc
+O.logistaminata ggaacggcgtcagcttcgtggggct------cgccgggaagaaggacggcaagaccaagg
+O.punctata_meri ------------------------------------------------------------
+O.nivara_intron acatccgcgacgccttcatggcgctctaccgcggcctcgagctgctcaagaaattcaggc
+O.punctata_intr ------------------------------------------------------------
+O.rufipogon_int acatccgcgacgccttcatggcgctctaccgcggcctcgagctgctcaagaaattcaggc
+O.sativa_intron -------------------------------------------------------caggc
+                                                                            
+
+O.barthii_intro acatc-------------------------------------------------------
+O.glaberima_int acatc-------------------------------------------------------
+O.glumaepatula_ acatc-------------------------------------------------------
+O.pindica_intro acatc-------------------------------------------------------
+O.logistaminata acggcggcggcaaagggcgnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+O.punctata_meri ------------------------------------------------------------
+O.nivara_intron acatc-------------------------------------------------------
+O.punctata_intr ------------------------------------------------------------
+O.rufipogon_int acatc-------------------------------------------------------
+O.sativa_intron acatc-------------------------------------------------------
+                                                                            
+
+O.barthii_intro ------------------------------------------------------------
+O.glaberima_int ------------------------------------------------------------
+O.glumaepatula_ ------------------------------------------------------------
+O.pindica_intro ------------------------------------------------------------
+O.logistaminata nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+O.punctata_meri ------------------------------------------------------------
+O.nivara_intron ------------------------------------------------------------
+O.punctata_intr ------------------------------------------------------------
+O.rufipogon_int ------------------------------------------------------------
+O.sativa_intron ------------------------------------------------------------
+                                                                            
+
+O.barthii_intro -------------------------------------------------------ttccc
+O.glaberima_int -------------------------------------------------------ttccc
+O.glumaepatula_ -------------------------------------------------------ttccc
+O.pindica_intro -------------------------------------------------------ttccc
+O.logistaminata nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+O.punctata_meri ------------------------------------------------------------
+O.nivara_intron -------------------------------------------------------ttccc
+O.punctata_intr ------------------------------------------------------------
+O.rufipogon_int -------------------------------------------------------ttccc
+O.sativa_intron -------------------------------------------------------ttccc
+                                                                            
+
+O.barthii_intro tcttcatctttcctttttgccatatctgacaagctaaaaccacgaagtcacggtatttta
+O.glaberima_int tcttcatctttcctttttgccatatctgacaagctaaaactacgaagtcacggtatttta
+O.glumaepatula_ tcttcatctttcctttttgccatatctgacaagctaaaaccacgaagtcacggtatttta
+O.pindica_intro tcttcatctttcctttttgccatatctgacaagctaaaaccacgaagtcacggtatttta
+O.logistaminata nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnaagtcacggtatttta
+O.punctata_meri ----------------------------------------------------gtatttta
+O.nivara_intron tcttcatctttcctttttgccatatctgacaagctaaaaccacgaagtcacggtatttta
+O.punctata_intr ----------------------------------------------gtcacgatatccta
+O.rufipogon_int tcttcatctttcctttttgccatatctgacaagctaaaaccacgaagtcacggtatttta
+O.sativa_intron tcttcatctttcctttttgccatatctgacaagctaaaaccacgaagtcacggtatttta
+                                                                    .***..**
+
+O.barthii_intro gaacaagacttgccttttgtgtctatgtatattgtcttctatgccatgcatgatgcat--
+O.glaberima_int gaacaagacttgccttctgtgtctatgtatattgtcttctatgccatgcatgatgcat--
+O.glumaepatula_ gaacaagacttgccttttgtgtctatgtatattgtcttctatgccatgcatgatgcat--
+O.pindica_intro gaacaagacttgccttttgtgtctatgtatattgtcttctatgccatgcatgatgcat--
+O.logistaminata taacaagacttgccttttgtgtctatgtatatagtcttgtatgccatgcatgatgcat--
+O.punctata_meri gaacaaggcttgccttttgtgtctatgtatattgtcttctatgctatgcatgatgcatga
+O.nivara_intron gaacaagacttgccttttgtgtctatgtatattgtcttctatgccatgcatgatgcat--
+O.punctata_intr aaacaagatttgccttgtatatatatgtagattttcttctatgcgacgcatgatgcaa--
+O.rufipogon_int gaacaagacttgccttttgtgtctatgtatattgtcttctatgccatgcatgatgcat--
+O.sativa_intron gaacaagacttgccttttgtgtctatgtatattgtcttctatgccatgcatgatgcat--
+                 ******..******* *.*.* ****** **  **** ***** *.**********   
+
+O.barthii_intro ---------atatatacgcatttgt---------------aagctatttagaattctgat
+O.glaberima_int ---------atatatacgcatttgt---------------aagctatttagaattctgat
+O.glumaepatula_ ---------atatatacgcatttgt---------------aagctatttagaattctgat
+O.pindica_intro ---------atatatacgcatttgt---------------aagctatttagaattctgat
+O.logistaminata ---------atatatacgcatttgt---------------aagctatttagaattttgat
+O.punctata_meri tgcacacacacacacacacacttgtaatatatggctagtgaagctatttagaattctgat
+O.nivara_intron ---------atatatacgcatttgt---------------aagctatttagaattctgat
+O.punctata_intr -----atatatgcaaaaacattcgtaatatacagctaatgaagatatctagaattctgat
+O.rufipogon_int ---------atatatacgcatttgt---------------aagctatttagaattctgat
+O.sativa_intron ---------atatatacgcatttgt---------------aagctatttagaattctgat
+                         *...* * .**.*.**               *** ***.*******.****
+
+O.barthii_intro ggccaaacctc-------------------------------acactaatagcatgcaac
+O.glaberima_int ggccaaacctc-------------------------------acactaatagcatgcaac
+O.glumaepatula_ ggccaaacctc-------------------------------acactaatagcatgcaac
+O.pindica_intro ggccaaacctc-------------------------------acactaatagcatgcaac
+O.logistaminata ggccaaacctc-------------------------------acactaatagcatgcaac
+O.punctata_meri ggccaaacctc-------------------------------acactaatagcatgcaac
+O.nivara_intron ggccaaacctc-------------------------------acactaatagcatgcaac
+O.punctata_intr ggccaaacctcatattaataggtttttcctgccaaaagaaaaacactgatagcatggaac
+O.rufipogon_int ggccaaacctc-------------------------------acactaatagcatgcaac
+O.sativa_intron ggccaaacctc-------------------------------acactaatagcatgcaac
+                ***********                               *****.******** ***
+
+O.barthii_intro tgatcgatcgcactaattgcatgcacaca----aatgatatag-------atagtttggt
+O.glaberima_int tgatcgatcgcactaattgcatgcacaca----aatgatatag-------atagtttggt
+O.glumaepatula_ tgatcgatcacactaattgcatgcacaca----aatgatatag-------atagtttggt
+O.pindica_intro tgatcgatcacactaattgcatgcacaca----aatgatatag-------atagtttggt
+O.logistaminata tgatcgatcacactaattgcatgcacaca----aatgatatagatagttcatagtttggt
+O.punctata_meri tgatcgatcacactaattgcatgcacaca----aatgatatag-------atagtttggt
+O.nivara_intron tgatcgatcacactaattgcatgcacaca----aatgatatag-------atagtttggt
+O.punctata_intr taatcgatcacactaattgcatgcacacaaattaatgatatcg-------atggtttagt
+O.rufipogon_int tgatcgatcacactaattgcatgcacaca----aatgatatag-------atagtttggt
+O.sativa_intron tgatcgatcacactaattgcatgcacaca----aatgatatag-------atagtttggt
+                *.*******.*******************    ******** *       **.****.**
+
+O.barthii_intro taactgaccaactaggaaaaaaa----ttaagttgtttcttcatagatgtatatctaaca
+O.glaberima_int taactgaccaactaggaaaaaaaaa--ttaagttgtttcttcatagatgtatatctaaca
+O.glumaepatula_ taactgaccaactaggaaaaaaaaa--ttaagttgtttcttcatagatgtatatctaaca
+O.pindica_intro taactgaccaactaggaaaaaaaaa--ttaagttgtttcttcatagatgtatatctaaca
+O.logistaminata taactgaccaaccaggaaaaaaaaaacttaagttgtttcttcatagatgtatatctaaca
+O.punctata_meri taactgaccaaccaggaaaaaaaaaacttaagttgtttcttcatagatgcatg--taaca
+O.nivara_intron taactgaccaactaggaaaaaaaaa--ttaagttgtttcttcatagatgtatatctaaca
+O.punctata_intr taactgatctaccagaaaaaaaaca---taggttgtttcttcatagatgcatc-------
+O.rufipogon_int taactgaccaactaggaaaaaaaaa--ttaagttgtttcttcatagatgtatatctaaca
+O.sativa_intron taactgaccaactaggaaaaaaaaa--ttaagttgtttcttcatagatgtatatctaaca
+                *******.* **.**.*******     **.******************.**        
+
+O.barthii_intro aattactactatgaatattagttgcagcatgagtcatggagcac--tgtgtgagcagcac
+O.glaberima_int aattactactatgaatattagttgcagcatgagtcatggagcac--tgtgtgagcagcac
+O.glumaepatula_ aattactactatgaatattagttgcagcatgagtcatggagcac--tgtgtgagcagcac
+O.pindica_intro aattactactatgaatattagttgcagcatgagtcatggagcac--tgtgtgagcagcac
+O.logistaminata aattactactatgaatattagttgcagcatgagtcatggagcactgtgtgtgagcagcac
+O.punctata_meri aattactactatgaatattagttgcagcatgagtcatggagcactgtgtgtgagcagcac
+O.nivara_intron aattactactatgaatattagttgcagcatgagtcatggagcac--tgtgtgagcagcac
+O.punctata_intr --taataattatga--attagttgcagcatgagtcatagagcactgtgtgtgagcagcac
+O.rufipogon_int aattactactatgaatattagttgcagcatgagtcatggagcac--tgtgtgagcagcac
+O.sativa_intron aattactactatgaatattagttgcagcatgagtcatggagcac--tgtgtgagcagcac
+                  * *. *.*****  *********************.******  **************
+
+O.barthii_intro acaactacacctgcactgcacccaagcatgcagtacagtagtagtttagtcaaatttcaa
+O.glaberima_int acaactacacctgcactgcacccaagcatgcagtacagtagtagtttagtcaaatttcaa
+O.glumaepatula_ acaactacacctgcactgcacccaagcatgcagtacagtagtagtttagtcaaatttcaa
+O.pindica_intro acaactacacctgcactgcacccaagcatgcagtacagtagtagtttagtcaaatttcaa
+O.logistaminata acaactacacctgcaccgcacccaagcatgcagtacagtagtagtttagtcaaatttcaa
+O.punctata_meri acaactacacctgcactgcacccaagcatgcagtacagtagtagtttagtcaaatttcaa
+O.nivara_intron acaactacacctgcactgcacccaagcatgcagtacagtagtagtttagtcaaatttcaa
+O.punctata_intr accactacacctgcactgcacccaagcatg-----cagtaacagtttagtcaaatttcaa
+O.rufipogon_int acaactacacctgcactgcacccaagcatgcagtacagtagtagtttagtcaaatttcaa
+O.sativa_intron acaactacacctgcactgcacccaagcatgcagtacagtagtagtttagtcaaatttcaa
+                ** *************.*************     *****..******************
+
+O.barthii_intro ccccgttttgcatggaagcatccgtgtaaatcacgtagccatccatacaccatcctgtgt
+O.glaberima_int ccccgttttgcatggaagcatccgtgtaaatcacgtagccatccatacaccatcctgtgt
+O.glumaepatula_ ccccgttttgcatggaagcatccgtgtaaatcacgtagccatccatacaccatcctgtgt
+O.pindica_intro ccccgttttgcatggaagcatccgtgtaaatcacgtagccatccatacaccatcctgtgt
+O.logistaminata ccccgttttgcatggaagcatccgtgtaaatcacgtagccatccatacaccatcctatgt
+O.punctata_meri ccccgttttgcatggaagcatccgtgtaaatcacgtagccatccatacactatgctgtgt
+O.nivara_intron ccccgttttgcatggaagcatccgtgtaaatcacgtagccatccatacaccatcctgtgt
+O.punctata_intr ccccgttttgcatggaagcatccgtgtaaatcacgtagccatccatacaccatgctgtgt
+O.rufipogon_int ccccgttttgcatggaagcatccgtgtaaatcacgtagccatccatacaccatcctgtgt
+O.sativa_intron ccccgttttgcatggaagcatccgtgtaaatcacgtagccatccatacaccatcctgtgt
+                **************************************************.** **.***
+
+O.barthii_intro cacctgaaagcgactgtttctcctttcaaattactaattcttttgtggtttttgaaaagg
+O.glaberima_int cacctgaaagcgactgtttctcctttcaaattactaattcttttgtggtttttgaaaagg
+O.glumaepatula_ cacctgaaagcgactgtttctactttcaaattactaattcttttgtggtttttgaaaagg
+O.pindica_intro cacctgaaagcgactgtttctcctttcaaattactaattcttttgtggtttttgaaaagg
+O.logistaminata cacctgaaagcgactgtttctcctttcaaattactaattcttttgtggtttttgaaaagg
+O.punctata_meri cacctgaaagcgactgtttctcctttcaaattactaattcttttgtggtttttgaaaagg
+O.nivara_intron cacctgaaagcgactgtttctcctttcaaattactaattcttttgtggtttttgaaaagg
+O.punctata_intr cacctgaaagcgactgtttttcctttcaaatcactag-tcttttgtggtttttgaaaggg
+O.rufipogon_int cacctgaaagcgactgtttctcctttcaaattactaattcttttgtggtttttgaaaagg
+O.sativa_intron cacctgaaagcgactgtttctcctttcaaattactaattcttttgtggtttttgaaaagg
+                *******************.* *********.****. *******************.**
+
+O.barthii_intro tagattaattcaccggttattttaggtggctgtctttatatttc-ttttacttgtcaatt
+O.glaberima_int tagattaattcaccggttattttaggtggctgtctttatatttc-ttttacttgtcaatt
+O.glumaepatula_ tagattaattcaccggttattttaggtggctgtctttatatttc-ttttacttgtcaatt
+O.pindica_intro tagattaattcaccggttattttgggtggctgtctttatatttc-ttttacttgtcaatt
+O.logistaminata tagattaattcaccggttattttaggtggctgtctttatatttcttttttcttgtcaatt
+O.punctata_meri tagattaattcaccggctattttaggtggctgtctttatatttc-tttttcttgtcaatt
+O.nivara_intron tagattaattcaccggttattttgggtggctgtctttatatttc-ttttacttgtcaatt
+O.punctata_intr ttgattaattcaacgattaatttaggtggatgtctttatatttc-tctttcttgtcaatt
+O.rufipogon_int tagattaattcaccggttattttaggtggctgtctttatatttc-ttttacttgtcaatt
+O.sativa_intron tagattaattcaccggttattttaggtggctgtctttatatttc-ttttacttgtcaatt
+                * ********** **..** ***.***** ************** *.** **********
+
+O.barthii_intro atggtgttcttgtggttctgacggatttggatgcttttttggttgcatgcatggatggat
+O.glaberima_int atggtgttcttgtggttctgacggatttggatgcttttttggttgcatgcatggatggat
+O.glumaepatula_ atggtgttcttgtggttctgacggatttggatgcttttttggttgtatgcatggatggat
+O.pindica_intro atggtgttcttgtggttctgacggatttggatgcttttttggttgcatgcatggatggat
+O.logistaminata atggtgttcttgtggtgctgacggatttggatgc-tttttggttgcatgtatggatggat
+O.punctata_meri atggtgttcttgtggtgctgacggttttggatgc-tttttggttgcatgtatggatggat
+O.nivara_intron atggtgttcttgtggttctgacggatttggatgcttttttggttgcatgcatggatggat
+O.punctata_intr atggtgttcttgtggtgctgacggatttggatgc-tttttggttgcatgtatggatggat
+O.rufipogon_int atggtgttcttgtggttctgacggatttggatgcttttttggttgcatgcatggatggat
+O.sativa_intron atggtgttcttgtggttctgacggatttggatgcttttttggttgcatgcatggatggat
+                **************** ******* ********* **********.***.**********
+
+O.barthii_intro gggagcagctctctcaatgtaaaggctttcaccaaaatattgaagaaatttgtcaaggta
+O.glaberima_int gggagc-------------------------------------------------aggta
+O.glumaepatula_ gggagc-------------------------------------------------aggta
+O.pindica_intro gggagc-------------------------------------------------aggta
+O.logistaminata gggagc-------------------------------------------------aggta
+O.punctata_meri gggagc-------------------------------------------------aggta
+O.nivara_intron gggagc-------------------------------------------------aggta
+O.punctata_intr gggagc-------------------------------------------------aggta
+O.rufipogon_int gggagc-------------------------------------------------aggta
+O.sativa_intron ggg----------------------------------------------------aggta
+                ***                                                    *****
+
+O.barthii_intro atatactaattagccacatctgtgcccttttgaaatggatggatggaagaatgaagagtc
+O.glaberima_int atatactaattagccacatctgtgcccttttgaaatggatggatggaagaatgaagagtc
+O.glumaepatula_ atatactaattagccacatctgtgcccttttgaaatggatggatggaagaatgaagagtc
+O.pindica_intro atatactaattagccacatctgtgcccttttgaaatggatggatggaagaatgaagagtc
+O.logistaminata atatactaattagccacatctgtgctcttttgaaatggatggatggaagaatgaagagtc
+O.punctata_meri atatactaattagccacatcggtgcccttttgaaatggatggatggaagaatgaagagtc
+O.nivara_intron atatactaattagccacatctgtgcccttttgaaatggatggatggaagaatgaagagtc
+O.punctata_intr atatactaattagccacttatgtgcccttttgaaatgggtggatggaagaatgaagagtc
+O.rufipogon_int atatactaattagccacatctgtgcccttttgaaatggatggatggaagaatgaagagtc
+O.sativa_intron atatactaattagccacatctgtgcccttttgaaatggatggatggaagaatgaagagtc
+                ***************** *  ****.************.*********************
+
+O.barthii_intro taaataa---tagatgataaagattaaagaaaaccggtctacatatataaggcttctagg
+O.glaberima_int taaataa---tagatgataaagattaaagaaaaccggtctacatatataaggcttctagg
+O.glumaepatula_ taaataa---tagatgataaagattaaagaaaaccggtctacatatataaggcttctagg
+O.pindica_intro taaataa---tagatgataaagattaaagaaaaccggtctacatatataaggcttctagg
+O.logistaminata taaacaa---tagatgataaagattaaagaaaaccggtctacatatataaggcttctagg
+O.punctata_meri taaataa---tagatgataaagattaaagaaaaccggtctacatatataaggcttctagg
+O.nivara_intron taaataa---tagatgataaagattaaagaaaaccggtctacatatataaggcttctagg
+O.punctata_intr taaacaatactagatgataaatattaaagataactggtctac----ataaggcttatagg
+O.rufipogon_int taaataa---tagatgataaagattaaagaaaaccggtctacatatataaggcttctagg
+O.sativa_intron taaataa---tagatgataaagattaaagaaaaccggtctacatatataaggcttctagg
+                ****.**   *********** ******** ***.*******    ********* ****
+
+O.barthii_intro agaataaagttctaagtgtactattagtagt----ttagtaccctcaaagcagaggtact
+O.glaberima_int agaataaagttctaggtgtactattagtagt----ttagtaccctcaaagcagaggtact
+O.glumaepatula_ agaataaagttctaagtgtactattagtagt----ttagtaccctcaaagcagaggtact
+O.pindica_intro agaataaagttctaagtgtactattagtagt----ttagtaccctcaaagcagaggtact
+O.logistaminata agaataaagttctaagtgtactattagtagt----ttagtaccctcaaagcagaggtact
+O.punctata_meri agaataaagttctaagtgtactattagtaatttaattagtaccctcaaagcagaggtact
+O.nivara_intron agaataaagttctaagtgtactattagtagt----ttagtaccctcaaagcagaggtact
+O.punctata_intr agaataaagttcta-gtgtactattagtagt----ttactaccctcaaagca-agctact
+O.rufipogon_int agaataaagttctaagtgtactattagtagt----ttagtaccctcaaagcagaggtact
+O.sativa_intron agaataaagttctaagtgtactattagtagt----ttagtaccctcaaagcagaggtact
+                ************** **************.*    *** ************* ** ****
+
+O.barthii_intro agatctcattctcgacagtgtaa---tcctagtcactagtcagcctaataacatgagaca
+O.glaberima_int agatctcattctcgacagtgtaa---tcctagtcactagtcagcctaataacatgagaca
+O.glumaepatula_ agatctcattctcgacagtgtaa---tcctagtcactagtcagccaaataacatgagaca
+O.pindica_intro agatctcattctcgacagtgtaa---tcctagtcactagtcagcctaataacatgagaca
+O.logistaminata agatctcattctcgacagtgtaa---tcctagtcactagtcagccaaataacatgagaca
+O.punctata_meri agatctcattctcgacagtgtaatcctcctagtcactagtcagccaaataacatgagaca
+O.nivara_intron agatctcattctcgacagtgtaa---tcctagtcactagtcagcctaataacatgagaca
+O.punctata_intr agatctcattcatgactgtgtga---tcctagtcactagtcagccaaataacatgagaca
+O.rufipogon_int agatctcattctcgacagtgtaa---tcctagtcactagtcagcctaataacatgagaca
+O.sativa_intron agatctcattctcgacagtgtaa---tcctagtcactagtcagcctaataacatgagaca
+                *********** .*** ****.*   ******************* **************
+
+O.barthii_intro gcataaacattttcttgcaaggaataatttaa-ttttttaatata-ttttttaaaaaaaa
+O.glaberima_int gcataaacattttcttgcaaggaataatttaa-ttttttaatata-ttttttaaaaaaaa
+O.glumaepatula_ gcataaacattttcttgcaaggaataatttaa-ttttttaatatattttttaaaaaaaaa
+O.pindica_intro gcataaacattttcttgcaaggaataatttaatttttttaatata-ttttttaaaaaaaa
+O.logistaminata gcataaatattttcttgtaaggaataattta--ttttttaatatt-ttttttaaaaaaat
+O.punctata_meri gcataaacatttttttgtaaggaataattta--ttttttaatata-ttttttaaaaaaat
+O.nivara_intron gcataaacattttcttgcaaggaataatttaa-ttttttaatatattttttttaaaaaaa
+O.punctata_intr acataaatattttcttgtaaggaataatctgaaaattttattt---tttttaaaaaaaaa
+O.rufipogon_int gcataaacattttcttgcaaggaataatttaa-ttttttaatata-tttttttaaaaaaa
+O.sativa_intron gcataaacattttcttgcaaggaataatttaa-ttttttaatata-tttttttaaaaaaa
+                .******.*****.***.**********.*.    ***** *    *****  ****** 
+
+O.barthii_intro tgctactccgagctgacagtgactggtacgaactgctttgcatttcaggtatcatctggt
+O.glaberima_int tgctactccgagctgacagtgactggtacgaactgctttgcatttcaggtatcatctggt
+O.glumaepatula_ tgctactccgagctgacagtgactggtacgaactgctctgcatttcaggtatcatctggt
+O.pindica_intro tgctactccgagctgacagtgactggtacgaactgctttgcatttcaggtatcatctggt
+O.logistaminata tgctgtatgcaactgacagtgactggtacgaactgctctgcatttcag----------gt
+O.punctata_meri tgctatatgcaactgacagtgactgatacgaactgctctgcatttcaggtatcatct-gt
+O.nivara_intron tgctactc--agctgacagtgactggtacgaactgctttgcatttcaggtatcatctggt
+O.punctata_intr tgctatatgcaactgacagccac-ggtacgaattgctctgcatctcag----------gt
+O.rufipogon_int tgctactccgagctgacagtgactggtacgaactgctttgcatttcaggtatcatctggt
+O.sativa_intron tgctactccgagctgacagtgactggtacgaactgctttgcatttcaggtatcatctggt
+                ****.. .  *.*******. ** *.******.****.*****.****          **
+
+O.barthii_intro gctccacaatcctactgcaaagctgcacaaacatacaaattcacttcaatcagtttttt-
+O.glaberima_int gctccacaatcctactgcaaagctgcacaaacatacaaattcacttcaatcagtttttt-
+O.glumaepatula_ gctccacaatcctactgcaaagctgcacaaacatacaaattcacttcaatcagtttttt-
+O.pindica_intro gctccacaatcctactgcaaagctgcacaaacatacaaattcacttcaatcagtttttt-
+O.logistaminata gctccacaatcctactgcaaagctgcaaaaacatacaaattcacttcaatcagtttttt-
+O.punctata_meri gctccacaatcctactgcaaagctgcacaaacatacaaattcacttcaatcagtttttt-
+O.nivara_intron gctccacaatcctactgcaaagctgcacaaacatacaaattcacttcaatcagtctttt-
+O.punctata_intr gctccacaatcctaatgcaaagctgcacaaacatatgcactttctagtatcaattttttg
+O.rufipogon_int gctccacaatcctactgcaaagctgcacaaacatacaaattcacttcaatcagtttttt-
+O.sativa_intron gctccacaatcctactgcaaagctgcacaaacatacaaattcacttcaatcagtttttt-
+                ************** ************ *******.. *.*. **   ****.*.**** 
+
+O.barthii_intro gggggatggaaacatgtctctctgacgaatatgaactgaagcatgcgaaattctgaacag
+O.glaberima_int gggggatggaaacatgtctctctgacgaatatgaactgaagcatgcgaaattctgaac--
+O.glumaepatula_ gggggatggaaacatgtctctctgacgaatatgaactgaagcatgcgaaattctgaacag
+O.pindica_intro gggggatggaaacttgtctctctgacgaatatgaactgaagcatgcgaaattctgaac--
+O.logistaminata -ggggatggaaacatgtccatctgacgaatatgaactgaagcatgcgaaattctgaacag
+O.punctata_meri -ggggatggaaacatgtctctctgacgaatatgaactgaagcatgcgaaattctgaacag
+O.nivara_intron gggggatggaaacttgtctctctgacgaatatgaactgaagcatgcgaaattctgaacag
+O.punctata_intr gggggatggaaacatgtctatctgacgaacatgaactgaagcatgcgaaattctgaacag
+O.rufipogon_int gggggatggaaacatgtctctctgacgaatatgaactgaagcatgcgaaattctgaacag
+O.sativa_intron gggggatggaaacatgtctctctgacgaatatgaactgaagcatgcgaaattctgaacag
+                 ************ ****. *********.****************************  
+
+O.barthii_intro g-----------------------------------------------------------
+O.glaberima_int ------------------------------------------------------------
+O.glumaepatula_ g-----------------------------------------------------------
+O.pindica_intro ------------------------------------------------------------
+O.logistaminata gtacttcagctagcagatgaggtcgagtgcatcttcatgaagcatttcacaggcaatgac
+O.punctata_meri g-----------------------------------------------------------
+O.nivara_intron g-----------------------------------------------------------
+O.punctata_intr gtacttcagctagcagatgaggtcgagtgcatcttcatgaagcatttcacaggcaatgac
+O.rufipogon_int g-----------------------------------------------------------
+O.sativa_intron ------------------------------------------------------------
+                                                                            
+
+O.barthii_intro ------------------------------------------------------------
+O.glaberima_int ------------------------------------------------------------
+O.glumaepatula_ ------------------------------------------------------------
+O.pindica_intro ------------------------------------------------------------
+O.logistaminata aggaaggtggcgatgaaataccttaagccacagcagcccagaaacacacacatgatcacc
+O.punctata_meri ------------------------------------------------------------
+O.nivara_intron ------------------------------------------------------------
+O.punctata_intr aggaaggtggcgatgaaatacctcaagccacaacagcccagaaacacacacatgatcacc
+O.rufipogon_int ------------------------------------------------------------
+O.sativa_intron ------------------------------------------------------------
+                                                                            
+
+O.barthii_intro -------taggcatgtagctgagcaacttcaagatcagaatatcagatctgtcatctgca
+O.glaberima_int --------aggcatgtagctgagcaacttcaagatcagaatatcagatctgtcatctgca
+O.glumaepatula_ -------taggcatgtagctgagcaacttcaagatcagaatatcagatctgtcatctgca
+O.pindica_intro --------aggcatgtagctgagcaacttcaagatcagaatatcagatctgtcatctgca
+O.logistaminata ttcctcgtaggcatgtagctgagcaacttcaatatcagaatatcagatctgtcatctgca
+O.punctata_meri -------taggcatgtagctgggcaacttcaagatcagaatatcagatctgtcatctgca
+O.nivara_intron -------taggcatgtagctgagcaacttcaagatcagaatatcagatctgtcatctgca
+O.punctata_intr ttcctcgtaggcatgtagctgagcaacttcatgatcagaatatcagatctgtcatctgca
+O.rufipogon_int -------taggcatgtagctgagcaacttcaagatcagaatatcagatctgtcatctgca
+O.sativa_intron --------aggcatgtagctgagcaacttcaagatcagaatatcagatctgtcatctgca
+                        *************.*********  ***************************
+
+O.barthii_intro tttggcacacaaatctaacttcacttcttct-tttttttcatgttctaatttgcaggttt
+O.glaberima_int tttggcacacaaatctaacttcacttcttct-tttttctcatgttctaatttgc------
+O.glumaepatula_ tttggcacacaaatcttacttcacttctt----ttttttcatgttctaatttgcagg---
+O.pindica_intro tttggcacacaaatctaacttcacttctttt--ttttttcatgttctaatttgc------
+O.logistaminata tgtggcacacaaatctaacttcacttcttctttttttttcatgttctaatttgc------
+O.punctata_meri tgtggcacacaaatctaacttcacttcttc---ttttttcatgttctaatttgcagg---
+O.nivara_intron tttggcacacaaatctaacttcacttcttcc-tttttttcatgttctaatttgcagg---
+O.punctata_intr tttggcacaaaaatctaacttcacttctttt--ttgtttcttgttctaatttgc------
+O.rufipogon_int tttggcacacaaatctaacttcacttcttct-tttttttcatgttctaatttgcagg---
+O.sativa_intron tttggcacacaaatctaacttcacttcttct-tttttttcatgttctaatttgc------
+                * ******* ****** ************    ** *.** *************      
+
+O.barthii_intro cactattcatcatatacgcgattttagcccatgttaggtaaattcttgagaattacggtt
+O.glaberima_int -----------------------------------aggtaaattcttgagaattacggtt
+O.glumaepatula_ -----ttcatcatatacgcgatttt----------aggtaaattcttgagaattacggtt
+O.pindica_intro -----------------------------------aggtaaattcttgagaattacggtt
+O.logistaminata -----------------------------------aggtaaattcttgagaattacggtt
+O.punctata_meri -----ttcatcatatacgcgatttt----------aggtaaattcttgagaattagggtt
+O.nivara_intron -----ttcatcatatacgcgatttt----------aggtaaattcttgagaattacggtt
+O.punctata_intr -----------------------------------aggtaaattcttgagaattaaggtt
+O.rufipogon_int -----ttcatcatatacgcgatttt----------aggtaaattcttgagaattacggtt
+O.sativa_intron -------------------------------------gtaaattcttgagaattacggtt
+                                                     ****************** ****
+
+O.barthii_intro cagttctaggggtaaagcactatttagaaatagattttttattactgcgtttgtacttgg
+O.glaberima_int cagttctaggggtaaagcactatttagaaatagattttttattactgcgtttgtacttgg
+O.glumaepatula_ cagttctaggggtaaagcactatttagaaatagattttttattactgcgtttgtacttgg
+O.pindica_intro cagttctaggggtaaagcactatttagaaatagattttttattactgcgtttgtacttgg
+O.logistaminata cagttctaggggtaaagcactatttagaaatagattttttattactgcgtttgtacttgg
+O.punctata_meri cagttct-ggggtaaagcactatttagaaataga-tttttattactgcgtttgtacttgg
+O.nivara_intron cagttctaggggtaaagcactatttagaaatagattttttattactgcgtttgtacttgg
+O.punctata_intr cagttctaggagtaaaacatgatttagaaatatg-tttttattactgtgtttgtacttgg
+O.rufipogon_int cagttctaggggtaaagcactatttagaaatagattttttattactgcgtttgtacttgg
+O.sativa_intron cagttctaggggtaaagcactatttagaaatagattttttattactgcgtttgtacttgg
+                ******* **.*****.**. *********** . ************.************
+
+O.barthii_intro tacttctgttcaggctatatatgctctgttcttgacaagagttcaattgattagatttag
+O.glaberima_int tacttctgttcaggctatatatgctctgttcttgacaagagttcaattgattagatttag
+O.glumaepatula_ tacttctgttcaggctatatatgctctgttcttgacaagagttcaattgattagatttag
+O.pindica_intro tacttctgttcaggctatatatgctctgttcttgacaagagttcaattgattagatttag
+O.logistaminata tacttctgttcaggctatatatgctctgttcttgacaagagttcaattgcttagatttag
+O.punctata_meri tacttctgttcaggctatataagctctgttgttgacaagagttcaattgattagatttag
+O.nivara_intron ttcttctgttcaggctatatatgctctgttcttgacaagagttcaattgattagatttag
+O.punctata_intr tagttttgttcaggctaaatatgctctgttcttgacaagagttcaattgattagatatag
+O.rufipogon_int tacttctgttcaggctatatatgctctgttcttgacaagagttcaattgattagatttag
+O.sativa_intron tacttctgttcaggctatatatgctctgttcttgacaagagttcaattgattagatttag
+                *  **.*********** *** ******** ****************** ****** ***
+
+O.barthii_intro catgtgggctcaatgtttgcaa-atttttcgaatttcagacttaggacctcatgataata
+O.glaberima_int catgtgggctcaatgtttgcaa-atttttcgaatttcagacttaggacctcatgataata
+O.glumaepatula_ catgtgggctcaatgtttgcaa-atttttcaaatttcagacttaggacctcatgataata
+O.pindica_intro catgtgggctcaatgtttgcaa-atttttcaaatttcagacttaggacctcatgataata
+O.logistaminata catgtgggctcaatgtttgcaa-atttttcaaatttcagacttaggacctcatgataata
+O.punctata_meri catgtgggctcaatgttcgcaatttttttcaaattccagacttaggacctcatgataata
+O.nivara_intron catgtgggctcaatgtttgcaa-atttttcaaatttcagacttaggacctcatgataata
+O.punctata_intr catgcgggctcaatgttcgcaa-aattttcaaatttcagacttaagaccacatgataata
+O.rufipogon_int catgtgggctcaatgtttgcaa-atttttcaaatttcagacttaggacctcatgataata
+O.sativa_intron catgtgggctcaatgtttgcaa-atttttcaaatttcagacttaggacctcatgataata
+                ****.************.****   *****.****.********.**** **********
+
+O.barthii_intro aaagatgcaattttacctcaaagtaatgtatagatgtgaccttgcttctgcaggtaagaa
+O.glaberima_int aaagatgcaattttacctcaaagtaatgtatagatgtgaccttgcttctgcaggtaagaa
+O.glumaepatula_ aaagatgcaattttacctcaaagtaatgtatagatgtgaccttgcttctgcaggtaagaa
+O.pindica_intro aaagatgcaattttacctcaaagtaatgtatagatgtgaccttgcttctgcaggtaagaa
+O.logistaminata aaagatgcaattttacctcaaagtaatgtatagatgtgaccttgcttctgcaggtaagaa
+O.punctata_meri aaagatgcaattttacctcaaagtaatgtatagatgtggccttgcttctgcaggtaagaa
+O.nivara_intron aaagatgcaattttacctcaaagtaatgtatagatgtgaccttgcttctgcaggtaagaa
+O.punctata_intr aaagatgcaattttacctcaaagtaatg--gagctgtggccttgcttctgcaggtaagaa
+O.rufipogon_int aaagatgcaattttacctcaaagtaatgtatagatgtgaccttgcttctgcaggtaagaa
+O.sativa_intron aaagatgcaattttacctcaaagtaatgtatagatgtgaccttgcttctgcaggtaagaa
+                ****************************   ** ****.*********************
+
+O.barthii_intro acataaactttgggaaaatttggtaattcagctgtgtttcatgtactgattttcagttct
+O.glaberima_int acataaactttgggaaaatttggtaattcagctctgtttcatgtactgattttcagttct
+O.glumaepatula_ acataaactttgggaaattttggtaattcagctctgtttcatgtactgattttcagttct
+O.pindica_intro acataaactttgggaaaatttggtaattcagctctgtttcatgtactgattttcagttct
+O.logistaminata acataaactttgggaaaatttggtaattcagctctatttcat-tactgattttcagttct
+O.punctata_meri atataaactttgggaaattttggtaattcagctctgtttcatgtactgattttcagttct
+O.nivara_intron acataaactttgggaaaatttggtaattcagctctgtttcatgtactgattttcagttct
+O.punctata_intr atataaactttgggaaattttggtagctcagctctgtttcatgtactgattttcagttct
+O.rufipogon_int acataaactttgggaaaatttggtaattcagctctgtttcatgtactgattttcagttct
+O.sativa_intron acataaactttgggaaaatttggtaattcagctctgtttcatgtactgattttcagttct
+                *.*************** *******..****** *.****** *****************
+
+O.barthii_intro caactcggattctgttgtttcaggtaaagactaaagacctcatgagttttcttatcacaa
+O.glaberima_int caactcggattctgttgtttcaggtaaagactaaagacctcatgagttttcttatcacaa
+O.glumaepatula_ caactcggattctgttgtttcaggtaaagactaaagacctcatgagttttcttatcacaa
+O.pindica_intro caactcggattctgttgtttcaggtaaagactaaagacctcatgagttttcttatcacaa
+O.logistaminata caactcggattctgttgtttcaggtaaagactaaagacctcatgagttttcttatcacaa
+O.punctata_meri caactcgtaatatgttgtttcaggtaaagactaaagacctcatgagttttcttatcacaa
+O.nivara_intron caactcggattctgttgtttcaggtaaagactaaagacctcatgagttttcttatcacaa
+O.punctata_intr caacttggaa-ctgttgtttcaggtaaaaattagagacttcatcagttttttaatcacaa
+O.rufipogon_int caactcggattctgttgtttcaggtaaagactaaagacctcatgagttttcttatcacaa
+O.sativa_intron caactcggattctgttgtttcaggtaaagactaaagacctcatgagttttcttatcacaa
+                *****.* *   ****************.*.**.****.**** ******.* *******
+
+O.barthii_intro attgttgaaagcatctatctgataagcaggctgccttgacatgcaggtaatactgaagaa
+O.glaberima_int attgttgaaagcatctatctgataagcaggctgccttgacatgcaggtaatactgaagaa
+O.glumaepatula_ attgttgaaagcatctatctgataagcaggctgccttgacatgcaggtaatactgaagaa
+O.pindica_intro attgttgaaagcatctatctgataagcaggctgccttgacatgcaggtaatactgaagaa
+O.logistaminata attgttgaaagcatctatctgataagcaggttgccttgatatgcaggtaatactgaagta
+O.punctata_meri attgtggaaagcatctatctgataagcatgctaccttgacgtgaaggtaatactgaagta
+O.nivara_intron attgttgaaagcatctatctgataagcaggctgccttgacatgcaggtaatactgaagaa
+O.punctata_intr attgttgaaagcatctatctgataagcaggctgccttgaaatgcaggtaataccgaagta
+O.rufipogon_int attgttgaaagcatctatctgataagcaggctgccttgacatgcaggtaatactgaagaa
+O.sativa_intron attgttgaaagcatctatctgataagcaggctgctttgacatgcaggtaatactgaagaa
+                ***** ********************** *.*.*.**** .** *********.**** *
+
+O.barthii_intro actgaactttacactagagcttttgagagttggagctcagcatcttatgagtgaactggt
+O.glaberima_int actgaactttacactagagcttttgagagttggagctcagcatcttatgagtgaactggt
+O.glumaepatula_ actgaactttacactagagcttttgagagttggagctcagcatcttatgagtgaactggt
+O.pindica_intro actgaactttacactagagcttttgagagttggagctcagcatcttatgagtgaactggt
+O.logistaminata attgaactttacactagagcttttgagagatggagctcagcttcttatgagtgaattggt
+O.punctata_meri attgaactttacactagagcttttgagagatggagctcagcttctgatgagtgaattggt
+O.nivara_intron actgaactttacactagagcttttgagagttggagctcagcatcttatgagtgaactggt
+O.punctata_intr actgaactctacactagagctttt--gagttggagttcagcttcttatgagtgaactggt
+O.rufipogon_int actgaactttacactagagcttttgagagttggagctcagcatcttatgagtgaactggt
+O.sativa_intron actgaactttacactagagcttttgagagttggagctcagcatcttatgagtgaactggt
+                *.******.***************  *** *****.***** *** *********.****
+
+O.barthii_intro gctactatctgcaggtatgaatctttagatgggaaatactaaagattaacaactttgttt
+O.glaberima_int gctactatctgcaggtatgaatctttagatgggaaatactaaagattaacaactttgttt
+O.glumaepatula_ gctactatctgcaggtatgaatctttagatgggaaatactaaagattaacaactttgttt
+O.pindica_intro gctactatctgcaggtatgaatctttagatgggaaatactaaagattaacaactttgttt
+O.logistaminata gctactatctgcaggtatgaatctttagatgggaattactaaagattaacaactttgttt
+O.punctata_meri gctactatctgcaggtatgaatctttagatgggaattactaaagattaacaactttgttt
+O.nivara_intron gctactatctgcaggtatgaatctttagatgggaaatactaaagattaacaactttgttt
+O.punctata_intr gctactatctgcaggtatgaatctttagatggatattactaaagattatcaactttgttt
+O.rufipogon_int gctactatctgcaggtatgaatctttagatgggaaatactaaagattaacaactttgttt
+O.sativa_intron gctactatctgcaggtatgaatctttagatgggaaatactaacgattaacaactttgttt
+                ********************************. * ****** ***** ***********
+
+O.barthii_intro ggatcagtttcaaactaatagc--tgtcatgttttgaaggtactatgcttaatatacttc
+O.glaberima_int ggatcagtttcaaactaatagc--tgtcatgttttgaaggtactatgcttaatatacttc
+O.glumaepatula_ ggatcagtttcaaactaatagctgtgtcatgttttgaaggtactatgcttaatatacttc
+O.pindica_intro ggatcagtttcaaactaatagctgtgtcatgttttgaaggtactatgcttaatatacttc
+O.logistaminata ggatcagtttcaaactaatagctgtgtcacgttttgaaggtactacgcttaatacacttc
+O.punctata_meri ggatcagtttcaaactaatagctgtgtcatgttttgaaggtactatgcttaatacacttc
+O.nivara_intron ggatcagtttcaaactaatagctgtgtcatgttttgaaggtactatgcttaatatacttc
+O.punctata_intr ccatcagtttcaaactaatagctttgtcatgttttgaaggtactatgcttaatacacttc
+O.rufipogon_int ggatcagtttcaaactaatagctgtgtcatgttttgaaggtactatgcttaatatacttc
+O.sativa_intron ggatcagtttcaaactaatagctgtgtcatgttttgaaggtactatgcttaatatacttc
+                  ********************  *****.***************.********.*****
+
+O.barthii_intro atttctgactaggctagaaaattccagatctaggacactaatgccttcaaataattacag
+O.glaberima_int atttctgactaggctagaaaattccagatctaggacactaatgccttcaaataattacag
+O.glumaepatula_ atttctgactaggctagaaaattccagatctaggacactaatgccttcaaaaaattacag
+O.pindica_intro atttctgactaggctagaaaattccagatctaggacactaatgccttcaaataattacag
+O.logistaminata atttctgactaggctagaaaattccagatctaggacactaatgccttcaaaaaattacag
+O.punctata_meri atttctgactaggctagaa-----------------actaatgccttcaaaaaattacag
+O.nivara_intron atttctgactaggctagaaaattccagatctaggacactaatgccttcaaataattacag
+O.punctata_intr atttctgactaggctagaaaattccagatctaggacactaatgccttcaaaaaattacag
+O.rufipogon_int atttctgactaggctagaaaattccagatctaggacactaatgccttcaaataattacag
+O.sativa_intron atttctgactaggctagaaaattccagatctaggacactaatgccttcaaataattacag
+                *******************                 *************** ********
+
+O.barthii_intro gtaattggaagtacttttacaaggaacatcaattttaatttaatgttatggtgtaacatg
+O.glaberima_int gtaattggaagtacttttacaaggaacatcaattttaatttaatgttatggtgtaacatg
+O.glumaepatula_ gtaattggaagtacttttacaaggaacatcaattttaatttaatgttatggtgtaacatg
+O.pindica_intro gtaattggaagtacttttacaaggaacatcaattttaatttaatgttatggtgtaacatg
+O.logistaminata gtaattggaagtacttttacgaggaacatcaattttaatttaatgttatggtgtaacatg
+O.punctata_meri gtaattggaagtacttttacaaggaacatcaattttaatttaatgttatggtgaaacatg
+O.nivara_intron gtaattggaagtacttttacaaggaacatcaattttaatttaatgttatggtgtaacatg
+O.punctata_intr gtaattggaaatacttttgcaaagaatatcaattttaatttagtgttatgttaaaacata
+O.rufipogon_int gtaattggaagtacttttacaaggaacatcaattttaatttaatgttatggtgtaacatg
+O.sativa_intron gtaattggaagtacttttacaaggaacatcaattttaatttaatgttatggtgtaacatg
+                **********.*******.*.*.***.***************.******* *. *****.
+
+O.barthii_intro gtgaaatggtttatgggattgcag
+O.glaberima_int gtgaaatggtttatgggattgcag
+O.glumaepatula_ gtgaaatggtttatgggattgcag
+O.pindica_intro gtgaaatggtttatggggttgcag
+O.logistaminata gtgaaatggtttatgggattgcag
+O.punctata_meri gtgaaatggttgatgggattgcag
+O.nivara_intron gtgaaatggtttatgggattgcag
+O.punctata_intr gcaacatggttgatggaattgcag
+O.rufipogon_int gtgaaatggtttatgggattgcag
+O.sativa_intron gtgaaatggtttatgggattgcag
+                *..* ****** ****..******

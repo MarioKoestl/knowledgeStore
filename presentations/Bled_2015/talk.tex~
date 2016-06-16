@@ -1,0 +1,107 @@
+%PhD - Progress report
+\documentclass{beamer}
+\usepackage{graphicx}
+\usepackage{amsmath,amsfonts,amssymb}
+%exclude navigation symbols
+\beamertemplatenavigationsymbolsempty
+\usetheme[compress]{Dresden}
+\usecolortheme{seagull}
+\usefonttheme{structurebold}
+\expandafter\def\expandafter\insertshorttitle\expandafter{\insertshorttitle\hfill\insertframenumber\,/\,\inserttotalframenumber}
+\title[Unsupervised RNA family model building]{Unsupervised RNA family model building}
+
+\author[F. Eggenhofer]{Florian Eggenhofer}
+\institute[TBI]{Institute for Theoretical Chemistry\\ University of Vienna}
+\date{\today}
+\subject{}
+\keywords{}
+%\newcommand{\TODO}[1]{{\color{red} #1}}
+\begin{document}
+\frame{
+  \titlepage
+}
+%\section[Unsupervised RNA family model building]{Project: Unsupervised RNA family model building}
+%\subsection[Introduction]{Introduction}
+%General slide? Why covariance models?
+
+\frame{
+  \frametitle{RNA family model construction}
+  %Problem seed model construction -- model expansion with infernal toolkit
+  \includegraphics[width=\textwidth]{figures/modelsingeneral.eps}
+}
+
+\frame{
+  \frametitle{Challenges in RNA family model construction}
+  %Problem seed model construction -- model expansion with infernal toolkit
+  \includegraphics[width=\textwidth]{figures/modelsconstruction.eps}
+}
+
+\frame{
+  \frametitle{Pipeline - RNAlien}
+  %Overview
+  \includegraphics[width=\textwidth]{figures/RNAalienpipeline.eps}
+}
+
+\frame{
+  \frametitle{Tool}
+  
+  \begin{itemize}
+  \item Commandline tool 
+  \vspace{0.5cm}
+  \item Input: Fasta-File, optional Taxonomy Id
+  \vspace{0.5cm}
+  \item Dependencies: infernal, locarna, RNAz, clustal-o
+  \vspace{0.5cm}
+  \item Database interfaces via REST
+  \vspace{0.5cm}
+  \item available via Hackage: cabal install RNAlien (soonish)
+  \end{itemize}
+}
+
+\frame{
+  \frametitle{Webservice - Input}
+  %
+   \includegraphics[width=\textwidth]{figures/AlienServerInput.eps}
+}
+
+\frame{
+  \frametitle{Webservice - Output}
+  %
+   \includegraphics[width=\textwidth]{figures/AlienServerScreenshot.eps}
+}
+
+\frame{
+  \frametitle{Benchmark}
+  \begin{itemize}
+  \item Rfam as gold standard
+  \vspace{0.5cm}
+  \item compare search results
+  \vspace{0.5cm}
+  \item 
+  \vspace{0.5cm}
+  \item 
+  \vspace{0.5cm}
+  \item
+  \end{itemize}
+  
+}
+
+%Fragen/Bedankung/Funding
+\frame{
+  \frametitle{Thanks}
+  \begin{itemize}
+  \item Thanks for funding\\ 
+    \includegraphics[width=0.7\textwidth]{figures/funding.eps}\\
+  \item Thanks to Ivo, Christian
+  \item Thanks to my PhD-comitee:\\
+    Ivo L. Hofacker\\ 
+    Peter F. Stadler\\
+    Ren\'{e}e Schroeder\\
+  \item Thanks to my coworkers!
+  \item Thanks for your attention!
+  \end{itemize}
+}
+
+%backup slides
+\end{document}
+
