@@ -1,0 +1,5 @@
+Many appearing problems require the usage of already implemented functions and modules available in the Vienna RNA Library. 
+Implementing own scripts with C code and therefore working with specific data types can be time consuming and error-prune. Therefore, all nesseccary functions from the Vienna RNA Library should be accessible directly from scripting languages. My task was to help implementing a interface between C library functions of the Vienna RNA library and the scripting languages Perl, Python and Python3. Implementing a interface  enables us to use the comfort of scripting languages combined with the power and efficienty of C code. 
+Furthermore, to assure correctness of the Vienna RNA library and the implemented interfaces, unit tests were implemented.
+Unit Tests for the implemented interface were created for python, python3 and perl and unit tests for C-functions were created with c-unit tests.
+

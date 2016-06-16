@@ -1,0 +1,4 @@
+grep -i -r -l 'string' /place/to.start/searching  	show all files with text
+pkg-config --exists --print-errors 			packagename
+rpm -qa | grep packagename   				check for installed packages
+yum list packagename					only lists the library, NOT THE HEADER FILES!!!!!

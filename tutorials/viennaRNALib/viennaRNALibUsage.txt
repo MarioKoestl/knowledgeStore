@@ -1,0 +1,8 @@
+############################
+vienna rna lib install
+############################
+make maintainer-clean
+git submodule init / update
+autoreconf --install
+./configure --without-forester --with-python3 --prefix=..		#prefix = installation path
+make  ( make -j5, distribute compute power to 5 cores)
