@@ -1,0 +1,83 @@
+Autotools
+
+include <config.h>  to use PACKAGE_STRING, PACKAGE_VERSION, PACKAGE_NAME, VERSION,.. in your source code
+every directory must have a Makefile.am
+
+To make your distribution(tar file) use this commands:
+	autoreconf --install
+	./configure
+	make distcheck
+	gz tarball created
+
+to install the programm use this commands
+
+	extract tarball
+	cd directory
+	./configure --prefix=InstallationDirectory
+	make install
+	folders are created, program is compiled and can be used
+
+
+configure.ac file
+
+	AC_INIT(PackageName, VersionNumber, [mail address for help])  
+	AM_INIT_AUTOMAKE(-Wall -Werror foreign)    Werrer = all warnings as Errors, with foreign missing files are ok(such as Changelog, AUTHORS,..)
+	AC_PROG_CC	C compiler is searched and definded to CC variables
+	AC_PROG_CXX  	C++ compiler is searched,
+	AC_CONFIG_HEADERS([config.h])  config.h file is generated, #defines in configure.ac(created by MACROS like the AC_INIT) are gathered and put into config.h
+	PackageString can be used by the main.c because config.h gets PACKAGEString from automake
+	AC_CONFIG_FILES([			all makefiles created by configure have to be here
+	Makefile
+	src/Makefile
+	])
+	AC_SUBST(Variable, [Value])	set shell variables, can be used in the makefiles with $(VariableName)
+	AC_OUTPUT			finalizes everything and creates the files from Config_Files and Config_Headers	
+	
+	AM_PROG_AR 			for using archiver in your project
+	AC_PROG_LIBTOOL			add for using the libtool, libraries in the makefiles
+
+Linkage to other packages/Libraries is nessecary
+#Search for the RNAlib2 and set variables for Makefiles if found.  _CFLAGS and _LIBS can be overriden with the modue Name from PKG_CHECK_MODULES
+PKG_CHECK_MODULES([RNALIB], [RNAlib2],
+                  [ AC_SUBST([RNALIB_CFLAGS])
+                    AC_SUBST([RNALIB_LIBS])
+                  ],
+                  [])
+
+
+Makefile.am
+
+	SUBDIRS = src				iterate all subdirs before making this directory, more than one is possible
+	docu_DATA= INSTALL 			for other datas
+	docudir= $(pkgdatadir)
+	man_MANS = kinwalker.1 kinwalker.txt  	for manuals
+	LDADD = $(RNALIB_LIBS)  		set over AC_SUBST from configure.ac, defines to linkage path
+	(bin_PROGRAMMS =main.c , main_SOURCES =main.c , main_LDADD=libmoney.la)
+	AM_CPPFLAGS = $(RNALIB_CFLAGS)  libraryPath used with -I at the gcc command
+
+	bin_PROGRAMS = programName		*_PROGRAMS variables list programs that the Makefile should build, bin_Programs will make the programm in bindir
+	Primarys like *_DATA,*_LIBRARIES,*_SCRIPTS can be used, and automake recognize them
+	programName_SOURCES = main.c main.h	source files are linked to the programm name, if making a tarball with make dist. the source fil is inside the tarball
+	programName_SOURCES = main2.c  3 more sources are linked together ahd created as one programm described by bin_Programs
+	
+
+making Libraries
+	lib_LTLIBRARIES=libmoney.la   LTLIBRARIES = libtool libraries, isntall in lib directory
+	libmoney_la_SOURCES = money.c money.h
+
+	bin_PROGRAMS=main
+	main_SOURCES =money.c
+	main_LDADD=libmoney.la
+
+
+prefix	/usr/local
+  exec_prefix	${prefix}
+    bindir	${exec_prefix}/bin
+    libdir	${exec_prefix}/lib
+    …
+  includedir	${prefix}/include
+  datarootdir	${prefix}/share
+    datadir	${datarootdir}
+    mandir	${datarootdir}/man
+    infodir	${datarootdir}/info
+    docdir	${datarootdir}/doc/${PACKAGE}

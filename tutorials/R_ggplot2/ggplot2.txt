@@ -1,0 +1,97 @@
+#packages that are meaningfull
+
+library("ggplot2")
+library("scales")
+library("grid")
+library("plyr")
+
+
+#variable definiations
+input = "RF00169_realigned"
+small_colours  = c( "#008B00",
+	            "#40E0D0",
+		    "#FF00FF",
+		    "#FFA500",
+		    "#000000")
+
+#Read data from file
+input = "RF00169_realigned"
+filename=paste0("data/sequence similarity/",input)	#paste0 to concationate strings
+data<-read.table(file=filename,sep='\t',head=T)
+
+#read csv file
+data <- read.csv("FigS15B.txt")
+
+#get a subset from data
+small_labels = c(1,2)
+all <- subset(all, columOfAll %in% small_labels)  #only get columns with 1 or 2
+
+
+#Barplot
+p<- ggplot(data,aes(accession_number,sequence_similarity))   #aes defines the axis
+p<- p + geom_bar(stat="identity")
+p <- p + theme(axis.text.x = element_text(size=25,face="bold",angle=90),axis.title=element_text(size=20,face="bold"),axis.text.y = element_text(size=25,face="bold")) 
+p <- p + ylab("sequence similarity")                         
+p <- p + xlab("accession number")
+
+title= paste0("sequence similarity to reference sequence\n")
+p <- p + ggtitle(title)
+
+p
+
+
+#dotBlot with lineplot
+
+p <- ggplot(data, aes(transcription_rate,Score,color=as.character(dangle),shape=(barrier_heuristic)))
+p <- p + geom_point(size=5)
+p <- p + geom_line()
+title= paste0("base pair diversity (without time)")
+#p <- p + ggtitle(title)
+p <- p + theme(axis.text.x = element_text(size=35,face="bold",angle=90),legend.position="top",legend.title = element_blank(),axis.text.y = element_text(size=35,face="bold"),axis.title=element_text(size=25,face="bold"),legend.text=element_text(size=20), legend.background=element_rect(colour="black"),panel.background=element_rect(fill="white"),panel.grid.major = element_line(colour = "lightgray"),panel.grid.minor = element_line(colour = "#dddddd"), axis.title.x = element_text(colour="black"), axis.title.y = element_text(colour="black"), axis.line = element_line(size=1))
+#
+p <- p + ylab("bp diversity")                         
+p <- p + xlab("transcription rate nt/s")
+p <- p + scale_y_continuous(expand=c(0,0),limits=c(0,0.010))
+#p <- p + scale_x_discrete( limits = data["transcription_rate"])
+p <- p + scale_x_continuous(expand=c(0,0),limits = c(0,510), breaks = c(0,50,100,150,200,250,300,350,400,450,500), minor_breaks = seq(0,510,10))
+p <- p + scale_color_manual(name    = "dangle model",  #legende name
+                            breaks  = c("0", "2"),	# Werte der Tabelle
+                            labels  = c("dangle=0", "dangle=2"),  # Werte beschreiben
+                            values  = c("#ec4000","darkblue"))
+p <- p + scale_shape_manual(name = "barrier heuristic",
+                            values=c(8,1),
+                            labels = c("findpath","morgan higgs"))
+
+
+#dotBLot with lineplot
+p <- ggplot(subset(data,dangle==curDangle & barrier_heuristic==curBarrier), aes(transcription_rate,Score,group=acessionNumber,color=acessionNumber))
+
+p<- p + geom_line(size=1,position=position_jitter(width=0,height=0.01))
+
+#title = paste0("ensemble distance: TRP to trpL terminator")
+#title = paste0("ensemble distance: SRP to transient")
+#title = paste0("ensemble distance: RNAseP to functional")
+
+#p <- p+ ggtitle(title)
+
+p <- p + theme(axis.text.x = element_text(size=35,face="bold",angle=90),axis.text.y = element_text(size=35,face="bold"),axis.title=element_text(size=25,face="bold"),legend.position="none", legend.background=element_rect(colour="black"),panel.background=element_rect(fill="white"),panel.grid.major = element_line(colour = "lightgray"),panel.grid.minor = element_line(colour = "#dddddd"), axis.title.x = element_text(colour="black"), axis.title.y = element_text(colour="black"), axis.line = element_line(size=1))
+#
+
+p <- p + ylab("ensemble distance")      
+#p <- p + ylab("terminator bp appearence %")      
+
+p <- p + xlab("transcription rate nt/s")
+p <- p + scale_y_continuous(expand=c(0,0),limits=c(-0.01,1.1))
+p <- p + scale_x_continuous(expand=c(0,0),limits = c(0,510), breaks = c(0,50,100,150,200,250,300,350,400,450,500), minor_breaks = seq(0,510,10))
+p
+ 
+
+
+
+
+
+#saving stuff
+outputFile=paste0("pictures/sequence similarity/",input,".pdf")
+outputFileSvg=paste0("pictures/sequence similarity/",input,".svg")
+ggsave(file=outputFile, plot=p)
+
