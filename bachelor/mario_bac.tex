@@ -313,7 +313,7 @@ optimal \texttt{Kinwalker} parameters.
 
 \chapter{Materials and Methods}
 
-\section{data description} \label{data description}
+\section{Data description} \label{data description}
 
 \subsection{Input files and input data}
 
@@ -586,7 +586,7 @@ the current structure, (5) allowed max energy barrier, and (6) number of bases a
 \FloatBarrier
 
 
-\section{evolution of input data and predictions} \label{section:scores}
+\section{Evolution of input data and predictions} \label{section:scores}
 
 For evaluation of \texttt{Kinwalker} output data, different scoring functions were used, statistically analysed and the results were plotted for better visualization, using  \texttt{ggplot2}\citep{ggplot2} and  \texttt{R}\citep{R}. The source code for scoring functions was implemented in  \texttt{Python}\cite{python}. 
 Computations were performed on a 64-bit machine with Intel Octacore i7-4771 3.50 GHz and 32 GB RAM.
@@ -594,7 +594,7 @@ Computations were performed on a 64-bit machine with Intel Octacore i7-4771 3.50
 The scores used in this thesis are separated into two sections, the input scores \ref{section:input scores} and the prediction scores \ref{section:prediction scores}.
 Input scores are dealing with the input data itself, like RFAM alignments and the evolutionary conservation of their sequences. Prediction scores are dealing with \texttt{Kinwalker} output data and statistically evaluation of co-transcriptional folding trajectories.  
 
-\subsection{input scores} \label{section:input scores}
+\subsection{Input scores} \label{section:input scores}
 
 \subsubsection{structure conservation index (SCI)\cite{Washietl:2005} and consensus structure}
 			
@@ -671,7 +671,7 @@ Furthermore the mean distance similarity can be used, to determine the mean base
 Where n is the amount of all alignment sequences in $A$, and $S_i$ is one of these sequences.
 Results range from 0-1. Mean distance similarity of 1 means, that every $S_i$ is identical with $S_{ref}$.
 
-\subsection{prediction scores} \label{section:prediction scores}
+\subsection{Prediction scores} \label{section:prediction scores}
 
 \subsubsection{base-pair diversity} 
 
@@ -893,7 +893,7 @@ program \texttt{R}\cite{R} and afterwards plotted with the \texttt{ggplot2} pack
 \cite{ggplot2}. This chapter is separated into different sections, each
 dealing with one group of scoring function.
 	
-\section{structure conservation index (SCI), average sequence similarity}
+\section{Structure conservation index (SCI), average sequence similarity}
 
 The sequence similarity of each alignment sequence to their reference sequence as well as their consensus structure are shown in figure: \ref{fig:sequence_similarity}. 
 \texttt{RNaseP} (\textit{RF00010}) shows the highest
@@ -973,7 +973,7 @@ functional structure.
 \FloatBarrier
 		
 
-\section{base-pair diversity}
+\section{Base-pair diversity}
   
 Base-pair diversity is used to determine how many different base-pairs a
 sequence forms during and after co-transcriptional folding, and how many
@@ -1099,7 +1099,7 @@ More changes in diversity if transcription rate below 120 nt/s were used but rat
 %\end{figure}
 				
 \FloatBarrier	
-\section{ensemble diversity} \label{result:ensemble diversity}
+\section{Ensemble diversity} \label{result:ensemble diversity}
 
 The ensemble diversity score extended with base-pair probabilities instead of ensemble probabilities can be used to determine 
 the diversity of base-pairs along the folding trajectory. Due to choosing of $\frac{\Delta
@@ -1255,7 +1255,7 @@ improvements and (ii) into 2 biological observations I made from the data
 created, one dealing with similar trajectory behavior of some \texttt{SRP} sequences
 and the other one with the tryptophan operon.
 
-\section{sequence similarity and SCI}
+\section{Sequence similarity and SCI}
 
 
 %\texttt{SRP}:
@@ -1285,7 +1285,7 @@ structure forms pseudo-knots which cannot be predicted by the
 \texttt{RNAalifold} methods used to calculate the consensus structure.
 
 
-\section{base-pair diversity}
+\section{Base-pair diversity}
 
 When investigating the base-pair diversity for all three RNA families, I
 expected to find lower diversity when using base-pair time-scoring than
@@ -1360,7 +1360,7 @@ important questions:
 
 
  
-\section{ensemble diversity}
+\section{Ensemble diversity}
 Base-pair diversity was further improved by introducing the ensemble diversity score (equation:~\ref{eq:ensemble diversity
 }).
 %\todo{here we have the probability of observing a bp only if the respective sequence exists already? ronny.}
@@ -1421,7 +1421,7 @@ are not possibly in reality, because refolding into the MFE would take to
 long.
 
 
-\section{ensemble distance}
+\section{Ensemble distance}
 The idea of using the ensemble distance is to determine whether the base-pairs of an intermediate
 structure are present in the the folding trajectory of a sequence.
 
@@ -1439,7 +1439,7 @@ part of the chosen alignment. Deviations between the reference sequence and
 another alignment sequence could be so high, that the reference structure
 can never form.
 
-\section{attenuation of trp operon}
+\section{Attenuation of trp operon}
 Here I investigated the attenuation behavior of the \texttt{trpL} transcript upstream of the trp operon, especially the ensemble distance to the terminator and anti-terminator structure of trpL.
 As explained before, the attenuation and therefore regulation of the trp operon is correlated with the formation of secondary structures (i.e. 2 different hairpins) on the trp leader transcript (trpL) \cite{Yanofsky1977},\cite{Oxender1979}.
 
@@ -1544,7 +1544,7 @@ CP000058.1.2086711-2086808	&	yes	&	yes	&	yes	\\
 
 %Last conclusion
 
-\section{summary and outlook}
+\section{Summary and outlook}
 
 %Note: \texttt{Kinwalker} algorithm is assuming that the transcription rate is constant, which is not true for in vivo%!!!\citep{transcriptionPausing},%!!!\cite{trspeed} and also no effort is made to regard trans interactions( e.g. proteins or other RNAs).
 
