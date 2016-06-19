@@ -9,6 +9,8 @@
 \usefonttheme{structurebold}
 \expandafter\def\expandafter\insertshorttitle\expandafter{\insertshorttitle\hfill\insertframenumber\,/\,\inserttotalframenumber}
 
+\usepackage{amsmath} % write contitions within the equations
+
 \title[Kinwalker parameter space analysis]{Kinwalker parameter space analysis}
 
 \author[Mario Koestl]{Mario Koestl}
@@ -22,6 +24,14 @@
   \titlepage
 }
 
+\frame{
+\frametitle{Motivation}
+\begin{itemize}
+\item Are evolutionary conserved folding pathways present in related RNA sequences?
+\item Is it possible to predict such pathways by using kinetic heuristics like \texttt{Kinwalker}?
+\item How should the \texttt{Kinwalker} parameters be fine-tuned to better reflect reality?
+\end{itemize}
+}
 
 \frame{
 \frametitle{RNA basics}
@@ -39,8 +49,8 @@
 
 }
 
+%For better understanding I will start with the basics of RNA molecules and their co-transcriptional folding, because everything inside this thesis is related to RNAs.
 
-%
 %RNA is a polymer molecule consisting of smaller subunits called nucleotids
 %A nucleotide is composed of a nucleobase, a ribose
 %monosaccharid and a phosphate group. The nucleobase can either be an
@@ -67,19 +77,19 @@
 
 }
 
-
+%The next basic stuff I would like to explain is the event of RNA co-transcriptional folding
 %During transcription the new RNA strand is created starting with the 5' end, therefore RNA folding can occur during transcription at the sequence between the already transcribed 5' end and the transcription bubble.
 %Such refoldings lead to different structures, and the directed list of all these structures is called a co-transcriptional folding trajectory.
 
 %Computing such trajectories is extremely difficult and thus only a handful of programs exist which allow for an efficient prediction. One of them is the program
-%Kinwalker. Kinwalker is a heuristic that deterministic tries to predict RNA folding kinetics.
-%With Kinwalker it is possible to predict secondary structures for RNA chains during transcription.
+%Kinwalker. Kinwalker is a heuristic that deterministically tries to predict RNA folding kinetics.
+%With Kinwalker it is possible to predict the list of all emerging secondary structures for RNA chains during transcription.
 %
 
 
 \frame{
 \frametitle{Kinwalker}
-{\bf Parameters:} \texttt{--transcription rate}, \texttt{--pathfinding algorithm}, \texttt{--dangle option}, \texttt{--maxKeep}
+{\bf Parameters:} \texttt{--transcription rate}, \texttt{--pathfinding algorithm},\texttt{--maxKeep, \texttt{--dangle option}, }
 
 \begin{figure}
 \includegraphics[scale=0.2]{pictures/KinwalkOutput.png}
@@ -88,9 +98,9 @@
 %I decided to spare you the exact details of the how the kinwalker algorithm is working, but if someone really is interested, I have backup slides and I can of course explain it.
 %If not I'm just going to explain the output of a kinwalker run and the chosen parameters.
 %
-%I studied four parameters of the kinwalker algorithm. Transcription rate, the implemented pathfinding algorithm, dangle option which is similar to the choosen energy calculation model and the maxkeep parameter which defines the amount of simultaneously followed paths if a breath first search is chosen in the pathfinding algorithm.
+%I studied four parameters of the kinwalker algorithm. Transcription rate, the implemented pathfinding algorithm, the maxkeep parameter which defines the amount of simultaneously followed paths if a breath first search is chosen in the pathfinding algorithm and the dangle option which is similar to the choosen energy calculation model. 
 %
-%And on this picture we can see a kinwalker outputfile.
+%And on this picture we can also see a kinwalker outputfile.
 %The first two lines define the RNA sequence, as well as the MFE structure of this RNA sequence. Each line also shows the free energy of this structure (here -60 kcal/mol, this is the MFE structure).
 %The last structure in the output again, shows the MFE structure and the last line shows the whole runtime of the algorithm.
 %In between, the whole folding trajectory is shown.
@@ -100,6 +110,7 @@
 %transcription, (4) the energy barrier to get from the previous structure to
 %the current structure, (5) allowed max energy barrier, and (6) number of bases already transcribed.
 
+% the last line is always the MFE structure, and here we can see a local energy minimum or folding trap
 
 
 \frame{
@@ -120,8 +131,8 @@ ref. SRP functional structure & ref. SRP transient structure \\
 \end{table}
 }
 
-%I studies three different RNA families, each of them containing about 20 sequences. The first family is the Signal recognition particle, the second the tryptophan leader transcript and last the bacterial ribonuclease P.
-%I chose this RNA families because they are well studies, have existing benchmarking studies, there are reference sequences and refrence structures available and even co-transcriptional folding intermediates.
+%I studies three different RNA families, each of them containing about 20-25 sequences. The first family is the RNA part of the signal recognition particle, the second one the tryptophan leader transcript and last the bacterial ribonuclease P.
+%I chose this RNA families because they are already well studies, have existing benchmarking studies, there are reference sequences and refrence structures available and even co-transcriptional folding intermediates.
 %Within this talk I am only going to show you the results of the SRP family, due to time limitations.
 %The SRP reference sequence is able to form 2 different structures, the functional structure on the left and the transient structure on the right. Both of this structures were experimentally identified with cristallographic methods.
 
@@ -134,11 +145,17 @@ ref. SRP functional structure & ref. SRP transient structure \\
 \end{figure}
 
 \begin{equation}
-\mbox{ensemble diversity} = \frac{1}{l} \cdot \sum\limits_{i,j} (\frac{\Delta Time_{ij}}{period})\cdot (1- \frac{\Delta Time_{ij}}{period})  
+\begin{cases}
+\mbox{ensemble diversity} = \frac{1}{l} \cdot \sum\limits_{i,j} (p(i,j))\cdot (1- p(i,j))  \\
+p(i,j) =\frac{\Delta Time_{ij}}{period}
+\end{cases}
 \label{eq:ensemble diversity }
 \end{equation}
 
+
+
 }
+%Finally I can show you some results and like I said i focus primarely on the SRP family, but I calculated many different scores to analyze the kinwalker results with different parameters and different RNA families.
 %Describe the figure!!!
 %
 %I analyzed the corresponding kinwalker output data files for this region and came to following conclusion. 
@@ -167,7 +184,36 @@ d_{E,T}(M,s_{ref})= \sum\limits_{(i,j)_M \in s_{ref} } (1- p(i,j)) + \sum\limits
 \end{equation}
 
 
+
 }
+
+
+\frame{
+\frametitle{backup slides}
+
+}
+
+\frame{
+\frametitle{dangling base-pairs}
+\begin{itemize}
+\item stacking an unpaired base to adjacent helix
+\item decrease of $\Delta$free energy due to stacking bases
+\item Dangle 0: dangling end energy contribution is not taken into account at all.
+\item Dangle 2: stack as many as possible, even to more than one helix
+\end{itemize}
+\begin{figure}
+	\includegraphics[width=0.6\textwidth]{./pictures/dangling.png}
+	\label{fig:dangling}
+\end{figure}
+}
+
+%Dangling is the effect of stacking an unpaired base to an adjacent helix. 
+%Dangling is one of the highest energy contribution apart from the sugar-phosphate backbone and base-pairs and is significantly decreasing the free energy.
+%2 dangle models are used within my thesis, Dangle 0 and dangle 2.
+
+
+
+
 
 \frame{
 \begin{figure}
@@ -179,6 +225,9 @@ d_{E,T}(M,s_{ref})= \sum\limits_{(i,j)_M \in s_{ref} } (1- p(i,j)) + \sum\limits
 \end{figure}
 
 }
+
+
+
 
 
 
