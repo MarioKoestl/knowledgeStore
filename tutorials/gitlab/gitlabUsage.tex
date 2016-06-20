@@ -20,8 +20,9 @@
 
 \section{define sshkeys}
 
+You have to have a clone via ssh keys not https, do get this to work
 \begin{enumerate}
-\item \texttt{ssh-keygen -t rsa -C \"yourEmail\"} \#to create a ssh key in linux
+\item \texttt{ssh-keygen -t rsa -C "yourEmail"} \#to create a ssh key in linux
 \item cat /home/.ssh/id\_rsa.pub   \# shows the ssh key
 \item ssh -T git@github.com  \#test the ssh and activate it
 \item github to settings to deploy keys to Add deploy key
