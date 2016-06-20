@@ -18,11 +18,25 @@
 
 
 
+
 \begin{document}
 \pagenumbering{gobble} % no numberin on the titlepage
 \maketitle
 \newpage
 \pagenumbering{arabic} % or roman
+
+\section{important things}
+
+\subsection{How to install new package:}
+\begin{lstlisting}
+sudo yum -y install 'tex(multirow.sty)'
+\end{lstlisting}
+
+
+\subsection{installing a font because math10.pfb is not found}
+sudo rpm -ivh texlive-mathabx-type1-svn21129.0-19.fc23.noarch.rpm 
+
+
 
 %\chapter{overall view} can be used with report
 \section{equations}

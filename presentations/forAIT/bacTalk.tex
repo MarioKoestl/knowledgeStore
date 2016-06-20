@@ -11,7 +11,7 @@
 
 \usepackage{amsmath} % write contitions within the equations
 
-\title[Kinwalker parameter space analysis]{Kinwalker parameter space analysis}
+\title{In silico analysis of RNA co-transcriptional folding }
 
 \author[Mario Koestl]{Mario Koestl}
 \institute[TBI]{Institute for Theoretical Chemistry\\ University of Vienna}
@@ -32,6 +32,7 @@
 \item How should the \texttt{Kinwalker} parameters be fine-tuned to better reflect reality?
 \end{itemize}
 }
+
 
 \frame{
 \frametitle{RNA basics}
@@ -63,11 +64,11 @@
 %
 
 \frame{
-\frametitle{Co-transcripitonal folding}
+\frametitle{Co-transcriptional folding}
 \begin{itemize}
 \item RNA refolding during transcription
 \item {\bf Co-transcripitonal folding trajectory}: directed list of all created structures
-\item Computing such trajectories is extremely difficult.
+\item Computing such trajectories is extremely difficult
 \item Heuristic approach via \texttt{Kinwalker}
 \item Secondary structure prediction during transcription
 \end{itemize}
@@ -89,12 +90,26 @@
 
 \frame{
 \frametitle{Kinwalker}
-{\bf Parameters:} \texttt{--transcription rate}, \texttt{--pathfinding algorithm},\texttt{--maxKeep, \texttt{--dangle option}, }
+{\bf Parameters:} \texttt{--transcription rate}, \texttt{--pathfinding algorithm},\texttt{--maxKeep, \texttt{--dangle option}}
 
+{\bf dangling base-pairs}
+\begin{itemize}
+\item stacking an unpaired base to adjacent helix
+\item decrease of $\Delta$free energy due to stacking bases
+\item Dangle 0: dangling end energy contribution is not taken into account at all.
+\item Dangle 2: stack as many as possible, even to more than one helix
+\end{itemize}
 \begin{figure}
-\includegraphics[scale=0.2]{pictures/KinwalkOutput.png}
+	\includegraphics[width=0.4\textwidth]{./pictures/dangling.png}
+	\label{fig:dangling}
 \end{figure}
 }
+
+%Dangling is the effect of stacking an unpaired base to an adjacent helix. 
+%Dangling is one of the highest energy contribution apart from the sugar-phosphate backbone and base-pairs and is significantly decreasing the free energy.
+%2 dangle models are used within my thesis, Dangle 0 and dangle 2.
+
+
 %I decided to spare you the exact details of the how the kinwalker algorithm is working, but if someone really is interested, I have backup slides and I can of course explain it.
 %If not I'm just going to explain the output of a kinwalker run and the chosen parameters.
 %
@@ -111,6 +126,13 @@
 %the current structure, (5) allowed max energy barrier, and (6) number of bases already transcribed.
 
 % the last line is always the MFE structure, and here we can see a local energy minimum or folding trap
+
+\frame{
+\begin{figure}
+\includegraphics[scale=0.3]{pictures/KinwalkOutput.png}
+\end{figure}
+
+}
 
 
 \frame{
@@ -137,6 +159,29 @@ ref. SRP functional structure & ref. SRP transient structure \\
 %The SRP reference sequence is able to form 2 different structures, the functional structure on the left and the transient structure on the right. Both of this structures were experimentally identified with cristallographic methods.
 
 
+\frame{
+\frametitle{SRP Sequence similarity \& structure conservation index}
+
+\begin{table}
+\begin{tabular}{l|l}
+\includegraphics[width=0.5\textwidth]{./pictures/SS_SRP.pdf} &
+\includegraphics[width=0.4\textwidth]{./pictures/SCI_SRP.pdf}
+
+
+\end{tabular}
+\end{table}
+
+
+\begin{equation}
+SCI(A) = MFE(\mbox{consensus structure}) \cdot \frac{1}{\frac{1}{|A|}\cdot \sum\limits_{a\in A} MFE(a)}
+\end{equation}
+
+}
+
+
+%Finally I can show you some results and like I said I focus primarely on the SRP family, but I calculated many different scores to analyze the kinwalker results with different parameters and different RNA families.
+%Describe the figure!!!
+
 
 \frame{
 \frametitle{Ensemble diversity of SRP reference sequence}
@@ -155,9 +200,10 @@ p(i,j) =\frac{\Delta Time_{ij}}{period}
 
 
 }
-%Finally I can show you some results and like I said i focus primarely on the SRP family, but I calculated many different scores to analyze the kinwalker results with different parameters and different RNA families.
-%Describe the figure!!!
+
 %
+
+
 %I analyzed the corresponding kinwalker output data files for this region and came to following conclusion. 
 %In this area the SRP reference sequence folds relatively early into
 %the MFE structure. During he first half of transcription, it creates non MFE base-pairs at the 5' end similar to the ones experimentally identified as transient structure. These transient hairpins seem to prevent the sequence from forming stable intermediate structures and thus falling into a folding trap.
@@ -171,7 +217,11 @@ p(i,j) =\frac{\Delta Time_{ij}}{period}
 
 
 \frame{
-\frametitle{Ensemble distance of SRP family}
+\frametitle{backup slides}
+
+}
+\frame{
+\frametitle{Ensemble distance of SRP family to SRP transient}
 
 \begin{figure}
 
@@ -188,31 +238,13 @@ d_{E,T}(M,s_{ref})= \sum\limits_{(i,j)_M \in s_{ref} } (1- p(i,j)) + \sum\limits
 }
 
 
-\frame{
-\frametitle{backup slides}
 
-}
+
 
 \frame{
-\frametitle{dangling base-pairs}
-\begin{itemize}
-\item stacking an unpaired base to adjacent helix
-\item decrease of $\Delta$free energy due to stacking bases
-\item Dangle 0: dangling end energy contribution is not taken into account at all.
-\item Dangle 2: stack as many as possible, even to more than one helix
-\end{itemize}
-\begin{figure}
-	\includegraphics[width=0.6\textwidth]{./pictures/dangling.png}
-	\label{fig:dangling}
-\end{figure}
+\frametitle{consensus structure}
+
 }
-
-%Dangling is the effect of stacking an unpaired base to an adjacent helix. 
-%Dangling is one of the highest energy contribution apart from the sugar-phosphate backbone and base-pairs and is significantly decreasing the free energy.
-%2 dangle models are used within my thesis, Dangle 0 and dangle 2.
-
-
-
 
 
 \frame{
