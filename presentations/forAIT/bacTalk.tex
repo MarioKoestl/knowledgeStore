@@ -128,9 +128,9 @@
 % the last line is always the MFE structure, and here we can see a local energy minimum or folding trap
 
 \frame{
-\begin{figure}
-\includegraphics[scale=0.3]{pictures/KinwalkOutput.png}
-\end{figure}
+
+\includegraphics[scale=0.25]{pictures/KinwalkOutput.png}
+
 
 }
 
@@ -160,24 +160,43 @@ ref. SRP functional structure & ref. SRP transient structure \\
 
 
 \frame{
-\frametitle{SRP Sequence similarity \& structure conservation index}
+\frametitle{SRP mean sequence similarity= 68.2 \%}
 
 \begin{table}
-\begin{tabular}{l|l}
-\includegraphics[width=0.5\textwidth]{./pictures/SS_SRP.pdf} &
-\includegraphics[width=0.4\textwidth]{./pictures/SCI_SRP.pdf}
+\includegraphics[width=0.65\textwidth]{./pictures/SS_SRP.pdf}
 
+\begin{equation}
+\mbox{sequence similarity($S_1,S_2$)} = \frac{1}{n}\cdot \sum\limits^n_{i=1} \begin{cases} 
+1 & \mbox{if } S_1[i]=S_2[i] \\
+0 & \mbox{if } S_1[i]\not=S_2[i] \\ \end{cases}
+\label{eq:sequence similarity score} 	
+\end{equation}
+\begin{equation}
+ \mbox{mean sequence similarity} =  \frac{1}{n}\cdot \sum\limits^n_{i=1} \mbox{sequence similarity($S_{ref}$,$S_i$)}
+ \label{eq:sequence similarity average}	
+\end{equation}
+\end{table}
+
+
+
+
+}
+
+
+\frame{
+\frametitle{SRP structure conservation index = 0.8379}
+\begin{tabular}{l|l}
+\includegraphics[width=0.5\textwidth]{./pictures/SCI_SRP.pdf} &
+
+\includegraphics[width=0.3\textwidth]{./pictures/colorcode.pdf} \\
 
 \end{tabular}
-\end{table}
 
 
 \begin{equation}
 SCI(A) = MFE(\mbox{consensus structure}) \cdot \frac{1}{\frac{1}{|A|}\cdot \sum\limits_{a\in A} MFE(a)}
 \end{equation}
-
 }
-
 
 %Finally I can show you some results and like I said I focus primarely on the SRP family, but I calculated many different scores to analyze the kinwalker results with different parameters and different RNA families.
 %Describe the figure!!!
@@ -238,23 +257,49 @@ d_{E,T}(M,s_{ref})= \sum\limits_{(i,j)_M \in s_{ref} } (1- p(i,j)) + \sum\limits
 }
 
 
+\frame{
+\frametitle{SRP base pair diversity}
 
+\includegraphics[width=1\textwidth]{./pictures/SRPseqDecrease250_300nts.pdf}\\
 
+\begin{equation}
+bpDiversity_{\Delta Time_{ij}}(M) = \frac{1}{maxBP}\cdot \sum\limits_{(i,j) \in M} 
+\begin{cases} \frac{\Delta Time}{T_{total}} & \mbox{if (i,j) } \\ 
+0 & \mbox{if  not (i,j)} \\ 
+\end{cases}
+\end{equation}	
+
+}
 
 \frame{
-\frametitle{consensus structure}
+\begin{figure}
+
+\includegraphics[width=0.8\textwidth]{./pictures/srp_pylotree.pdf}
+
+\end{figure}
+
+}
+\frame{
+\begin{figure}
+
+\includegraphics[width=1\textwidth]{./pictures/MSA_SRP_5seq.png}
+
+\end{figure}
 
 }
 
 
-\frame{
-\begin{figure}
-\begin{tabular}{l}
- REALLY want to introduce bp diversity here!!!!
-\includegraphics[width=1.0\textwidth]{./pictures/SRPseqDecrease250_300nts.pdf}\\
 
-\end{tabular}
-\end{figure}
+\frame{
+\frametitle{Kinwalker details}
+\begin{itemize}
+\item create $C$ matrix by calculate MFE of every possible $(x_i,...,x_j)$ sub-sequence
+\item find path from structure $s_{i,j}$ to structure $s_{i,j+1}$.
+\item try every backtracked structure from $C$ matrix
+\item try to merge sub-structure into trajectory
+\end{itemize}
+
+\includegraphics[width=0.5\textwidth]{./pictures/energyBarrier.png}
 
 }
 
