@@ -9,12 +9,14 @@
 \usefonttheme{structurebold}
 \expandafter\def\expandafter\insertshorttitle\expandafter{\insertshorttitle\hfill\insertframenumber\,/\,\inserttotalframenumber}
 
-\usepackage{amsmath} % write contitions within the equations
+\usepackage{amsmath} % write conditions within the equations
 
 \title{In silico analysis of RNA co-transcriptional folding }
 
 \author[Mario Koestl]{Mario Koestl}
-\institute[TBI]{Institute for Theoretical Chemistry\\ University of Vienna}
+\institute{Institute for Theoretical Chemistry\\
+TBI\\
+University of Vienna}
 \date{\today}
 \subject{}
 \keywords{}
@@ -25,12 +27,135 @@
 }
 
 \frame{
-\frametitle{Motivation}
+\frametitle{Theoretical background}
 \begin{itemize}
-\item Are evolutionary conserved folding pathways present in related RNA sequences?
-\item Is it possible to predict such pathways by using kinetic heuristics like \texttt{Kinwalker}?
-\item How should the \texttt{Kinwalker} parameters be fine-tuned to better reflect reality?
+\item RNA structure = secondary structure
+\item Boltzmann ensemble
+\item MFE (Minimal Free Energy) structure
+\item Co-transcriptional folding
+\begin{figure}
+\includegraphics[scale=0.5]{pictures/coTransFolding.pdf}
+\end{figure}
+\item Folding trajectory
+\item Dangling
+\begin{figure}
+\includegraphics[width=0.4\textwidth]{./pictures/dangling.png}
+\end{figure}
 \end{itemize}
+}
+
+\frame{
+\frametitle{Motivation}
+{\bf (1) Is it possible to predict evolutionary conserved co-transcriptional folding trajectories for RNA sequences with in silico methods?}
+\begin{itemize}
+\item searching and using well studied RNA families
+\item usage of \texttt{kinwalker} algorithm
+\item comparing and statistical analysis of results
+\end{itemize}
+
+{\bf (2) Fine tuning of kinwalker parameter}
+\begin{itemize}
+\item calculation of trajectories for every possible parameter combination
+\item comparing with real trajectories
+\end{itemize}
+}
+
+\frame{
+\frametitle{RNA families used}
+\begin{itemize}
+\item \texttt{SRP}, \texttt{trpL}, \texttt{RNaseP}
+\item 20-25 sequences per RNA family
+\item from \texttt{RFAM database}
+\end{itemize}
+
+\begin{table}
+\begin{tabular}{l|l}
+ref. SRP functional structure & ref. SRP transient structure \\
+\hline \\
+\includegraphics[width=0.5\textwidth]{./pictures/X01074-1-functional-str.png} &
+\includegraphics[width=0.5\textwidth]{./pictures/X01074-1-transient-str.png} \\
+\end{tabular}
+\end{table}
+}
+
+%I studies three different RNA families, each of them containing about 20-25 sequences. The first family is the RNA part of the signal recognition particle, the second one the tryptophan leader transcript and last the bacterial ribonuclease P.
+%I chose this RNA families because they are already well studies, have existing benchmarking studies, there are reference sequences and refrence structures available and even co-transcriptional folding intermediates.
+%Within this talk I am only going to show you the results of the SRP family, due to time limitations.
+%The SRP reference sequence is able to form 2 different structures, the functional structure on the left and the transient structure on the right. Both of this structures were experimentally identified with cristallographic methods.
+
+\frame{
+\includegraphics[scale=0.25]{pictures/KinwalkOutput.png}
+}
+
+%And on this picture we can also see a kinwalker outputfile.
+%The first two lines define the RNA sequence, as well as the MFE structure of this RNA sequence. Each line also shows the free energy of this structure (here -60 kcal/mol, this is the MFE structure).
+%The last structure in the output again, shows the MFE structure and the last line shows the whole runtime of the algorithm.
+%In between, the whole folding trajectory is shown.
+%Every line shows:
+%(1) the current formed structure in dot bracket format, (2) the free energy
+%of this specific structure, (3) overall passed time since the beginning of
+%transcription, (4) the energy barrier to get from the previous structure to
+%the current structure, (5) allowed max energy barrier, and (6) number of bases already transcribed.
+
+% the last line is always the MFE structure, and here we can see a local energy minimum or folding trap
+
+
+
+
+
+
+\frame{
+\frametitle{Ensemble diversity of SRP reference sequence}
+\begin{figure}
+\includegraphics[scale=0.2]{pictures/SRP2510.pdf}
+\end{figure}
+
+\begin{equation}
+\begin{cases}
+\mbox{ensemble diversity} = \frac{1}{length} \cdot \sum\limits_{i,j} (p(i,j))\cdot (1- p(i,j))  \\
+p(i,j) =\frac{\Delta Time_{ij}}{period}
+\end{cases}
+\label{eq:ensemble diversity }
+\end{equation}
+
+
+
+}
+
+%
+
+
+%I analyzed the corresponding kinwalker output data files for this region and came to following conclusion. 
+%In this area the SRP reference sequence folds relatively early into
+%the MFE structure. During he first half of transcription, it creates non MFE base-pairs at the 5' end similar to the ones experimentally identified as transient structure. These transient hairpins seem to prevent the sequence from forming stable intermediate structures and thus falling into a folding trap.
+%
+%And with every other parameter combination, the sequence
+%folds into a folding trap. The predicted time needed to refold into the MFE structure precedes the life-time of an RNA molecule, and is
+%therefore only theoretically possible.
+%
+%That means that I found the correct paramter combination to predict co-transcriptional folding of the SRP reference sequence.
+%
+
+\frame{
+\frametitle{Summary}
+\begin{itemize}
+\item searching for suitable RNA families
+\item \texttt{kinwalker} trajectory calculation for all 3 families with every parameter combination (14000 calculation)
+\item \texttt{python} scripts for scoring
+\end{itemize}
+
+{\bf Results found}
+\begin{itemize}
+\item detection of co-transcriptional folding for single RNA sequences
+\item no detection of evolutionary conservation
+\item dangle option 2 and \texttt{findpath} algorithm are best parameter
+\item no clue for transcription rate
+\end{itemize}
+}
+
+\frame{
+\frametitle{backup slides}
+
 }
 
 
@@ -115,49 +240,6 @@
 %
 %I studied four parameters of the kinwalker algorithm. Transcription rate, the implemented pathfinding algorithm, the maxkeep parameter which defines the amount of simultaneously followed paths if a breath first search is chosen in the pathfinding algorithm and the dangle option which is similar to the choosen energy calculation model. 
 %
-%And on this picture we can also see a kinwalker outputfile.
-%The first two lines define the RNA sequence, as well as the MFE structure of this RNA sequence. Each line also shows the free energy of this structure (here -60 kcal/mol, this is the MFE structure).
-%The last structure in the output again, shows the MFE structure and the last line shows the whole runtime of the algorithm.
-%In between, the whole folding trajectory is shown.
-%Every line shows:
-%(1) the current formed structure in dot bracket format, (2) the free energy
-%of this specific structure, (3) overall passed time since the beginning of
-%transcription, (4) the energy barrier to get from the previous structure to
-%the current structure, (5) allowed max energy barrier, and (6) number of bases already transcribed.
-
-% the last line is always the MFE structure, and here we can see a local energy minimum or folding trap
-
-\frame{
-
-\includegraphics[scale=0.25]{pictures/KinwalkOutput.png}
-
-
-}
-
-
-\frame{
-\frametitle{RNA families used}
-\begin{itemize}
-\item \texttt{SRP}, \texttt{trpL}, \texttt{RNaseP}
-\item 20-25 sequences per RNA family
-\item from \texttt{RFAM database}
-\end{itemize}
-
-\begin{table}
-\begin{tabular}{l|l}
-ref. SRP functional structure & ref. SRP transient structure \\
-\hline \\
-\includegraphics[width=0.5\textwidth]{./pictures/X01074-1-functional-str.png} &
-\includegraphics[width=0.5\textwidth]{./pictures/X01074-1-transient-str.png} \\
-\end{tabular}
-\end{table}
-}
-
-%I studies three different RNA families, each of them containing about 20-25 sequences. The first family is the RNA part of the signal recognition particle, the second one the tryptophan leader transcript and last the bacterial ribonuclease P.
-%I chose this RNA families because they are already well studies, have existing benchmarking studies, there are reference sequences and refrence structures available and even co-transcriptional folding intermediates.
-%Within this talk I am only going to show you the results of the SRP family, due to time limitations.
-%The SRP reference sequence is able to form 2 different structures, the functional structure on the left and the transient structure on the right. Both of this structures were experimentally identified with cristallographic methods.
-
 
 \frame{
 \frametitle{SRP mean sequence similarity= 68.2 \%}
@@ -202,43 +284,6 @@ SCI(A) = MFE(\mbox{consensus structure}) \cdot \frac{1}{\frac{1}{|A|}\cdot \sum\
 %Describe the figure!!!
 
 
-\frame{
-\frametitle{Ensemble diversity of SRP reference sequence}
-\begin{figure}
-\includegraphics[scale=0.2]{pictures/SRP2510.pdf}
-\end{figure}
-
-\begin{equation}
-\begin{cases}
-\mbox{ensemble diversity} = \frac{1}{l} \cdot \sum\limits_{i,j} (p(i,j))\cdot (1- p(i,j))  \\
-p(i,j) =\frac{\Delta Time_{ij}}{period}
-\end{cases}
-\label{eq:ensemble diversity }
-\end{equation}
-
-
-
-}
-
-%
-
-
-%I analyzed the corresponding kinwalker output data files for this region and came to following conclusion. 
-%In this area the SRP reference sequence folds relatively early into
-%the MFE structure. During he first half of transcription, it creates non MFE base-pairs at the 5' end similar to the ones experimentally identified as transient structure. These transient hairpins seem to prevent the sequence from forming stable intermediate structures and thus falling into a folding trap.
-%
-%And with every other parameter combination, the sequence
-%falls into a folding trap. The predicted time needed to refold into the MFE structure precedes the life-time of an RNA molecule, and is
-%therefore only theoretically possible.
-%
-%That means that I found the correct paramter combination to predict co-transcriptional folding of the SRP reference sequence.
-%
-
-
-\frame{
-\frametitle{backup slides}
-
-}
 \frame{
 \frametitle{Ensemble distance of SRP family to SRP transient}
 
