@@ -20,3 +20,6 @@ portal.office.com : eigener Tened
 portal.azure.com : Azure Directory
 
 
+Babel: Javascript ECMA auf frühere Versionen umwandeln
+SASS verwenden statt Css	
+

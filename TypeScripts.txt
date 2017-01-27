@@ -1,0 +1,29 @@
+TypeScript: TypeScriptApp.sln
+	wird in javascript umgewandelt
+	DefinitlyTyped Library um in TypeScript viele sachen zu verwenden
+	
+	im Project:
+		Typescript über bower : typings folder
+		eigene js selber gemacht : eigeneer folder
+		Librarys : üner bower : lib folder
+	
+	für intelligence wieder in refereces file
+	speichern über tools options-> spfastdeploy->typescript
+		deploy minified versio :False
+		include source... : true
+
+	Module Loader über export ( Um Javascript Module zu schreiben)
+		Namespace loader auch möglich
+		import möglich
+
+
+Kompletter anfang:
+	install Typescript for Visualstudio
+	install SPFastDeploy: set Typescript
+	add intelligence to refrence
+	Write your ts file
+	save-->
+		js file erstelle
+			convertetes File
+		map file erstellt
+			lässt mich im Browser wieder mein ts file debuggen

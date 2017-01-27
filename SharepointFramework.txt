@@ -1,0 +1,29 @@
+https://sharepoint.github.io/
+
+https://dev.office.com/sharepoint/docs/spfx/web-parts/get-started/build-a-hello-world-web-part
+
+Webpart for modern online UI
+
+Visual Studio Code wird verwendet
+
+Yeoman--> Generator = Projektvorlage (spforms)
+
+VisualStudioCode:
+	in den Ordner des Projektes wechseln(COnsole)
+	code .--> öffnet projekt in VisualStudioCode
+
+	src:
+		meine Webparts
+	package.json
+		NuGet Packages
+		Dependencys
+		Versionen ( UPdaten hier)
+	
+	Workbench zum Testen verwenden
+
+Console
+	gulp serve:
+		typescript compilen, Webservice ankicken
+		geht mit Watchern, also nur einmal deployen
+		geht direkt auf Workbench
+			

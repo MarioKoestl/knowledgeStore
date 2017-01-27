@@ -15,6 +15,10 @@ Office UI Fabric : .Net Bootstrap
 		andreConnel codepen page für Beispiele
 		Main.css für office UI fabric
 	AngularJS
+		model.js herunterladen von Seite , dann im ANgular project als dependency injection hinzuladen, und verwenden	
+		https://material.angularjs.org, Cann man auch im CodePen anschauen und probieren
 					
 
 Visual Studio Gallery
+
+
