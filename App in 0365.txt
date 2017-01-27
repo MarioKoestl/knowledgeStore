@@ -1,0 +1,15 @@
+portal.azure.com -> azure directory -> add an app -> keys(muss mit app überienstimmen bei der ADAL Configurierung ium Code), permisions anlegen     
+initialize ADAL localStoragte whlen um sich nicht immer im INternet explorer anzumelde, zum abmelden cache/Cookies  lscöhen??
+
+Project z.B.: MVCAppGraph.sln Project
+SignOnUrl : Project Properties ssl URL oder 
+
+
+webconfig:
+ida:PostLogoutRedirectUri= Project.ssl URL
+ClientID im COde = AnwendungsID
+ClientSecret im Code = das was beim Schlüssel speichern als Value EINMAL kommt ( Name kann irgendwas eingegeben werden)
+TenantID= AzureID -> DirectoryID
+DomainName= brz02.onmicrosoft.com = AzureActiveDirectory->DomainNames
+
+Permission(im Azure): auswählen, hier outlook exchange API

@@ -1,0 +1,62 @@
+MVVM Design Patterns:
+Model View MOdelView = ins ModelView alles laden was wir in der View brauchen
+
+Dependency Injections:
+Dependency Box = Serverseitig oder Clientseitig
+Im Construktor des Construktors schreibt man rein dass man die Abhängigkeit benötigt ( das wird dann zur Laufzeit reingeladen durch Dependency INjektion). und nicht wie normal über include.
+
+Angular:
+project.json: nuget Packages
+Startup.cs : 
+AUf Project: Alt+Leertaste = dotnet watch run  ( möglichkeit ohne deployen änderungen auf den Server zu bringen)
+	jetzt unter http://localhost:5000 ( steht in Console)
+	
+
+index.html : 
+	<html ng-app="voucherApp">
+	alle directorys sind in ng-app
+	Angular intelligence unter Resharper options
+	view injecting unter data-ng-view
+
+Angular routes beginnne mit # ( #home, #Vouchers)
+
+für "var voucherApp = angular.module('voucherApp', ['ngRoute', 'AdalAngular']);"
+für 'voucherApp' benötige ich angular dependenciys = ['ngRoute', 'AdalAngular'] ( Dependency INjections)
+
+
+ADAL = 
+
+
+
+
+AzureAD Directory kann mit Windows Filesystem synchronisiert werden.
+	App registieren, als CLientID
+
+AzureAD direcury
+	-add my angular nAPp
+		mit Permissions
+	- ADAL hilft mir eine Authentifizierung vom Angular Projekt mit Sharpeoint zu machen
+	Routing permissions über requiresADLogin
+	Controll kommuniziert mit RestService und stellt das der View zur Verfügung
+		Controller kann auch mittels JSON von Sharepoint die Daten holen
+
+	Jede View(HTML) hat einen COntroller(Kommuniziert mit Service und holt Daten, z.B.: JSOM auf Sharepoint). Controller stellt Daten mittels $scope ( = ViewMOdel) der View zur Verfügung
+	routing: für diese Url ist dieser Controller mit dieser Route verantwortlich,....
+
+
+
+TrainingApp:
+
+Pages:views: -> Angular Views
+App.js:
+	var app = angular.module("traingsApp", ['ngRoute']);
+		Create new "trainingsApp" und dependency INnject ngRoute
+
+Default.aspx = SHellPage
+	Alle Referencen hinzufügen
+	<div ng-view=""></div>
+		Wichtig für Angular
+	<div style="margin-top: 20px; padding: 20px" ng-app="traingsApp"> und App.js var app = angular.module("traingsApp", ['ngRoute']); muss gleich sein
+
+	
+

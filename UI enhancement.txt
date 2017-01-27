@@ -1,0 +1,20 @@
+Bootstrap: , Bootstrap snippet pack   getbootstrap.com,		https://colorlib.com/wp/free-bootstrap-admin-dashboard-templates/
+	Bootrsap-->Css-->GridSystem
+		Unterteilt Bildschirm in 12 Spalten	
+	Media queries
+		vorraussetzung:		main css und responseive css implementiert	
+					im responsive.css = media queries
+						UNterschiedung der Css anhand der benutzen Median(Tablets, PC,..)
+	Statt COmponents-->glyphs eher sjw images einfügen
+
+
+
+Office UI Fabric : .Net Bootstrap
+	https://dev.office.com/fabric
+	React - Controls für WebParts
+		andreConnel codepen page für Beispiele
+		Main.css für office UI fabric
+	AngularJS
+					
+
+Visual Studio Gallery

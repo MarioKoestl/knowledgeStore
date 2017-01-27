@@ -1,0 +1,69 @@
+#####################################
+Sharepoint Hosted Addins
+####################################
+
+AppManifest.xml
+	Generell:
+		Versionsnummer, Name
+			Versionsnummer immer manuel erhöhen wenn Sharepoint Artefakte hinzugefügt werden ( sonst GUID Fehler)
+				nicht beim hinzufügen von Files oder Javascript änderungen.
+		Startpage ändern, Home NICHT löschen(KLomischer Fehler) einfach sagen dass iene andere Seite unserer Startseite ist.
+			Kann auch HTML Seite sein, damit es so ausschaut wie Sharepoint Seite muss Chrome control Placeholder verwendet werden : siehe ChromeApp.sln
+	Permissions:
+		eintellen welche Berechtigungen die App hat: z.B.: List : Write : 100, -> APP hat Write zugriff aud Custom List
+		Wenn keine Propertis angegeben dann muss der User eine LIste auswählen beim installieren??
+
+	Prerequisite:
+		Datenbank oder Webservice muss vorhanden sein
+	Remote ENpoints:
+		Mit was darf ich kommunizieren
+
+Features:
+	Module enthalten(Deployment Container) = new empty element
+		z.B.: Content, IMages, Pages zu deployen
+
+
+AddinPart = Sharepoint Hosted
+
+
+Generell Things:
+	Requirement für App deployment: App Managed Account: siehen ConfigureSP4Apps.ps1 powershell script
+		Disable LoopbackCkeck Powershell eintrag
+		Internet explorer automatische Anmeldung einstellen
+	App wird immer aud die Developer Site Deployed
+
+	Javascript Links für jede Apps extra hinzufügen, also keine Core App die alles beinhaltet ( vielleicht CDNs(Content Deployment Network) verwenden)
+	Sharepoint Added APp läuft unter neuen Domainname(App Domaine)
+	"SPFast Deploy" wie CKSDev nur jetzt für Apps
+		Tools, OPtions, SPFastDeploy, Javascript = auf True setzen, -> einmal deployen und dann nur mehr mit Speichern des javsciript ohne Deployen ändern
+		Typescript: minified version = kompakt machen, Map merkt sich beim Debugger die ursprünglichen schönen sachen.
+
+			
+#####################################
+Provider Hosted Addins
+####################################
+
+OnPrem = HighTrust über Powershell
+O365 = kein Trust = AzureAD (alte Bezeichnung ACS)
+
+Issuer-ID = GUID-CreateGUID (random GUID)
+Trust muss auf jede SIteCollection übereinstimmen, Name der APp muss mit Namen im Manifest übereinstimmen
+SigningCertificate = $certPath, 
+	Neues Certifiacte
+		IIS Manager-> Server Certifictate-> Create New
+		oder CreateCertificate powershell
+	PFX ins VisualStudio nehme, Passwort eingeben, die GUID dann ins Powershell geben (ConfigureHighTrust
+
+
+	Um Authorisation Problem zu lösen beim Debuggen muss das Configure
+
+
+JSOM Cross DOmain Problem:
+
+	var appContext = new SP.ClientContext.get_current();
+    
+	var hostContext = new SP.AppContextSite(appContext, hostUrl);
+    var web = hostContext.get_web();
+
+
+

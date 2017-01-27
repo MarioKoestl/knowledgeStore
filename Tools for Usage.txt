@@ -1,0 +1,22 @@
+SHarepiont INside : Chrome Addin
+Powersehell für 0365 : powershell.office.com
+Postman: Rest Calls Testen
+	damit es als JSON zurückkommt:
+		Headers:
+			key: Accept
+			value: application/json;odata=verbose
+Postman intercepter: Chrome addin, damit man die selebe ANmeldung verwendet wie diese die schon auf dem Chrome vorherschen verwendet
+
+CAMLDesigner 2013 : Create JSOM, REST CALLS Easy
+NAPA: Developer für 0365, SiteCollection -> Add an app-> napa. SharepointHostedapps direkt online schreiben
+ng-inspector: CHrome addin , show all Angular object on Website, Chrome addin
+
+Chrome apps Launchers: Chrome addins,  damit man die vorherigen installierten APps starten kann
+JSon Editor Online: 
+
+angular componenten: unter npm.com
+
+portal.office.com : eigener Tened
+portal.azure.com : Azure Directory
+
+
